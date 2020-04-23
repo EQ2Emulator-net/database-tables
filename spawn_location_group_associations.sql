@@ -22,7 +22,7 @@ CREATE TABLE `spawn_location_group_associations` (
   KEY `FK_group_association2` (`group_id2`),
   CONSTRAINT `FK_group_association1` FOREIGN KEY (`group_id1`) REFERENCES `spawn_location_group` (`group_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_group_association2` FOREIGN KEY (`group_id2`) REFERENCES `spawn_location_group` (`group_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2346 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2350 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
