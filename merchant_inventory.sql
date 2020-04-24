@@ -29,7 +29,7 @@ CREATE TABLE `merchant_inventory` (
   KEY `FK_merchant_inventory2` (`item_id`),
   CONSTRAINT `FK_merchant_inventory1` FOREIGN KEY (`inventory_id`) REFERENCES `merchants` (`inventory_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_merchant_inventory2` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=22821 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=22822 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
