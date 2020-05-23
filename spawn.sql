@@ -42,6 +42,7 @@ CREATE TABLE `spawn` (
   `transport_id` int(10) unsigned NOT NULL DEFAULT '0',
   `merchant_type` tinyint(3) unsigned NOT NULL DEFAULT '0',
   `processed` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `expansion_flag` int(10) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `SpawnIDX` (`name`),
   KEY `SpawnCmdIDX` (`command_primary`,`command_secondary`),
