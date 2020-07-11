@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,10 +14,10 @@ DROP TABLE IF EXISTS `item_levels_override`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `item_levels_override` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `item_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `adventure_class_id` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `tradeskill_class_id` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `level` smallint(5) unsigned NOT NULL DEFAULT '1',
+  `item_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `adventure_class_id` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `tradeskill_class_id` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `level` smallint(5) unsigned NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`),
   UNIQUE KEY `ItemClassIDX` (`item_id`,`adventure_class_id`,`tradeskill_class_id`),
   CONSTRAINT `FK_item_levels_override` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE

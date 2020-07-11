@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,9 +14,9 @@ DROP TABLE IF EXISTS `spell_data`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `spell_data` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `spell_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `tier` int(10) unsigned NOT NULL DEFAULT '1',
-  `index_field` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `spell_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `tier` int(10) unsigned NOT NULL DEFAULT 1,
+  `index_field` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `value_type` enum('INT','FLOAT','BOOL','STRING') COLLATE latin1_general_ci NOT NULL DEFAULT 'INT',
   `value` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '0',
   `value2` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '0',
@@ -24,7 +24,7 @@ CREATE TABLE `spell_data` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `SpellTierIDX` (`spell_id`,`tier`,`index_field`),
   CONSTRAINT `FK_spell_data` FOREIGN KEY (`spell_id`) REFERENCES `spells` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=95404 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=95407 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

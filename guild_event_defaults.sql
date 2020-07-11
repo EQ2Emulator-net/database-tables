@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -16,8 +16,8 @@ CREATE TABLE `guild_event_defaults` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `event_id` tinyint(3) unsigned NOT NULL,
   `event_name` varchar(100) COLLATE latin1_general_ci NOT NULL DEFAULT '',
-  `retain` tinyint(1) unsigned NOT NULL DEFAULT '1',
-  `broadcast` tinyint(1) unsigned NOT NULL DEFAULT '1',
+  `retain` tinyint(1) unsigned NOT NULL DEFAULT 1,
+  `broadcast` tinyint(1) unsigned NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`),
   UNIQUE KEY `EventNameIDX` (`event_id`,`event_name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=91 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

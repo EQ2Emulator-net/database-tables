@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,13 +14,13 @@ DROP TABLE IF EXISTS `ho_starter_chains`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `ho_starter_chains` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `starter_class` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `first_ability` smallint(5) unsigned NOT NULL DEFAULT '65535',
-  `second_ability` smallint(5) unsigned NOT NULL DEFAULT '65535',
-  `third_ability` smallint(5) unsigned NOT NULL DEFAULT '65535',
-  `fourth_ability` smallint(5) unsigned NOT NULL DEFAULT '65535',
-  `fifth_ability` smallint(5) unsigned NOT NULL DEFAULT '65535',
-  `sixth_ability` smallint(5) unsigned NOT NULL DEFAULT '65535',
+  `starter_class` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `first_ability` smallint(5) unsigned NOT NULL DEFAULT 65535,
+  `second_ability` smallint(5) unsigned NOT NULL DEFAULT 65535,
+  `third_ability` smallint(5) unsigned NOT NULL DEFAULT 65535,
+  `fourth_ability` smallint(5) unsigned NOT NULL DEFAULT 65535,
+  `fifth_ability` smallint(5) unsigned NOT NULL DEFAULT 65535,
+  `sixth_ability` smallint(5) unsigned NOT NULL DEFAULT 65535,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;

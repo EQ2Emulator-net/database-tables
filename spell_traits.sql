@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,16 +14,16 @@ DROP TABLE IF EXISTS `spell_traits`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `spell_traits` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `spell_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `level` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `class_req` tinyint(3) unsigned NOT NULL DEFAULT '255',
-  `race_req` tinyint(3) unsigned NOT NULL DEFAULT '255',
-  `isTrait` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `isInate` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `isFocusEffect` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `isTraining` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `tier` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `group` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `spell_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `level` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `class_req` tinyint(3) unsigned NOT NULL DEFAULT 255,
+  `race_req` tinyint(3) unsigned NOT NULL DEFAULT 255,
+  `isTrait` tinyint(1) unsigned NOT NULL DEFAULT 0,
+  `isInate` tinyint(1) unsigned NOT NULL DEFAULT 0,
+  `isFocusEffect` tinyint(1) unsigned NOT NULL DEFAULT 0,
+  `isTraining` tinyint(1) unsigned NOT NULL DEFAULT 0,
+  `tier` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `group` tinyint(3) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `FK_spell_traits` (`spell_id`),
   CONSTRAINT `FK_spell_traits` FOREIGN KEY (`spell_id`) REFERENCES `spells` (`id`) ON DELETE CASCADE ON UPDATE CASCADE

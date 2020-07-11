@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,17 +14,17 @@ DROP TABLE IF EXISTS `lootdrop`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `lootdrop` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `loot_table_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `item_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `item_charges` smallint(5) unsigned NOT NULL DEFAULT '1',
-  `equip_item` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `probability` float unsigned NOT NULL DEFAULT '25',
+  `loot_table_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `item_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `item_charges` smallint(5) unsigned NOT NULL DEFAULT 1,
+  `equip_item` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `probability` float unsigned NOT NULL DEFAULT 25,
   PRIMARY KEY (`id`),
   KEY `NewIndex` (`loot_table_id`),
   KEY `FK_lootdrop` (`item_id`),
   CONSTRAINT `FK_lootdrop` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_loottable` FOREIGN KEY (`loot_table_id`) REFERENCES `loottable` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=23075 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=23091 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

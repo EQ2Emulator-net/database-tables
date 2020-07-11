@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,16 +14,16 @@ DROP TABLE IF EXISTS `instance_spawns_removed`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `instance_spawns_removed` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `instance_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `spawn_type` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `spawn_location_entry_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `respawn_time` int(10) unsigned NOT NULL DEFAULT '0',
+  `instance_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `spawn_type` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `spawn_location_entry_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `respawn_time` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `InstanceIDX` (`instance_id`),
   KEY `SpawnIDX` (`spawn_location_entry_id`),
   CONSTRAINT `FK_instance_spawns` FOREIGN KEY (`spawn_location_entry_id`) REFERENCES `spawn_location_entry` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_instance_zones` FOREIGN KEY (`instance_id`) REFERENCES `instances` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

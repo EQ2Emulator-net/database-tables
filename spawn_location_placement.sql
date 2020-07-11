@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,28 +14,29 @@ DROP TABLE IF EXISTS `spawn_location_placement`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `spawn_location_placement` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `zone_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `spawn_location_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `x` float NOT NULL DEFAULT '0',
-  `y` float NOT NULL DEFAULT '0',
-  `z` float NOT NULL DEFAULT '0',
-  `x_offset` float NOT NULL DEFAULT '0',
-  `y_offset` float NOT NULL DEFAULT '0',
-  `z_offset` float NOT NULL DEFAULT '0',
-  `heading` float NOT NULL DEFAULT '0',
-  `pitch` float NOT NULL DEFAULT '0',
-  `roll` float NOT NULL DEFAULT '0',
-  `respawn` int(10) unsigned NOT NULL DEFAULT '3600',
-  `expire_timer` int(10) unsigned NOT NULL DEFAULT '0',
-  `expire_offset` int(10) unsigned NOT NULL DEFAULT '0',
-  `grid_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `processed` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `zone_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `spawn_location_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `x` float NOT NULL DEFAULT 0,
+  `y` float NOT NULL DEFAULT 0,
+  `z` float NOT NULL DEFAULT 0,
+  `x_offset` float NOT NULL DEFAULT 0,
+  `y_offset` float NOT NULL DEFAULT 0,
+  `z_offset` float NOT NULL DEFAULT 0,
+  `heading` float NOT NULL DEFAULT 0,
+  `pitch` float NOT NULL DEFAULT 0,
+  `roll` float NOT NULL DEFAULT 0,
+  `respawn` int(10) unsigned NOT NULL DEFAULT 3600,
+  `expire_timer` int(10) unsigned NOT NULL DEFAULT 0,
+  `expire_offset` int(10) unsigned NOT NULL DEFAULT 0,
+  `grid_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `processed` tinyint(1) unsigned NOT NULL DEFAULT 0,
+  `instance_id` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `SpawnLocationIDX` (`spawn_location_id`),
   KEY `ZoneIDX` (`zone_id`),
   CONSTRAINT `FK_placement1` FOREIGN KEY (`spawn_location_id`) REFERENCES `spawn_location_name` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_placement2` FOREIGN KEY (`zone_id`) REFERENCES `zones` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1587743 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=1588039 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

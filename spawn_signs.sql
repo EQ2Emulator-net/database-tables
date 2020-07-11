@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,23 +14,23 @@ DROP TABLE IF EXISTS `spawn_signs`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `spawn_signs` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `spawn_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `spawn_id` int(10) unsigned NOT NULL DEFAULT 0,
   `type` enum('Zone','Generic') COLLATE latin1_general_ci NOT NULL DEFAULT 'Generic',
-  `zone_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `widget_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `zone_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `widget_id` int(10) unsigned NOT NULL DEFAULT 0,
   `title` varchar(250) COLLATE latin1_general_ci DEFAULT NULL,
-  `widget_x` float NOT NULL DEFAULT '0',
-  `widget_y` float NOT NULL DEFAULT '0',
-  `widget_z` float NOT NULL DEFAULT '0',
-  `icon` smallint(6) NOT NULL DEFAULT '0',
+  `widget_x` float NOT NULL DEFAULT 0,
+  `widget_y` float NOT NULL DEFAULT 0,
+  `widget_z` float NOT NULL DEFAULT 0,
+  `icon` smallint(6) NOT NULL DEFAULT 0,
   `description` text COLLATE latin1_general_ci NOT NULL,
-  `sign_distance` float NOT NULL DEFAULT '0',
-  `zone_x` float NOT NULL DEFAULT '0',
-  `zone_y` float NOT NULL DEFAULT '0',
-  `zone_z` float NOT NULL DEFAULT '0',
-  `zone_heading` float NOT NULL DEFAULT '0',
-  `include_heading` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `include_location` tinyint(3) unsigned NOT NULL DEFAULT '1',
+  `sign_distance` float NOT NULL DEFAULT 0,
+  `zone_x` float NOT NULL DEFAULT 0,
+  `zone_y` float NOT NULL DEFAULT 0,
+  `zone_z` float NOT NULL DEFAULT 0,
+  `zone_heading` float NOT NULL DEFAULT 0,
+  `include_heading` tinyint(3) unsigned NOT NULL DEFAULT 1,
+  `include_location` tinyint(3) unsigned NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`),
   UNIQUE KEY `SpawnIDX` (`spawn_id`),
   CONSTRAINT `FK_signs_spawn` FOREIGN KEY (`spawn_id`) REFERENCES `spawn` (`id`) ON DELETE CASCADE ON UPDATE CASCADE

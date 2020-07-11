@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -16,9 +16,9 @@ CREATE TABLE `flight_paths` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `zone_id` int(10) unsigned NOT NULL,
   `name` char(255) COLLATE latin1_general_ci NOT NULL,
-  `speed` float NOT NULL DEFAULT '0',
-  `flying` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `early_dismount` tinyint(3) unsigned NOT NULL DEFAULT '1',
+  `speed` float NOT NULL DEFAULT 0,
+  `flying` tinyint(3) unsigned NOT NULL DEFAULT 1,
+  `early_dismount` tinyint(3) unsigned NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=989 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;

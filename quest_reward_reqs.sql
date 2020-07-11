@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,9 +14,9 @@ DROP TABLE IF EXISTS `quest_reward_reqs`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `quest_reward_reqs` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `list_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `class_req` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `race_req` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `list_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `class_req` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `race_req` tinyint(3) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;

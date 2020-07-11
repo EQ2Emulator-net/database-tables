@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,15 +14,15 @@ DROP TABLE IF EXISTS `spawn_location_group_associations`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `spawn_location_group_associations` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `group_id1` int(10) unsigned NOT NULL DEFAULT '0',
-  `group_id2` int(10) unsigned NOT NULL DEFAULT '0',
+  `group_id1` int(10) unsigned NOT NULL DEFAULT 0,
+  `group_id2` int(10) unsigned NOT NULL DEFAULT 0,
   `type` enum('SPAWN_SEPARATELY') COLLATE latin1_general_ci NOT NULL DEFAULT 'SPAWN_SEPARATELY',
   PRIMARY KEY (`id`),
   UNIQUE KEY `GroupAssociationIDX` (`group_id1`,`group_id2`),
   KEY `FK_group_association2` (`group_id2`),
   CONSTRAINT `FK_group_association1` FOREIGN KEY (`group_id1`) REFERENCES `spawn_location_group` (`group_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_group_association2` FOREIGN KEY (`group_id2`) REFERENCES `spawn_location_group` (`group_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2505 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2699 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,20 +14,20 @@ DROP TABLE IF EXISTS `recipes`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `recipes` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `recipe_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `tier` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `level` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `icon` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `skill_level` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `technique` int(10) unsigned NOT NULL DEFAULT '0',
-  `knowledge` int(10) unsigned NOT NULL DEFAULT '0',
+  `recipe_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `tier` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `level` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `icon` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `skill_level` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `technique` int(10) unsigned NOT NULL DEFAULT 0,
+  `knowledge` int(10) unsigned NOT NULL DEFAULT 0,
   `name` varchar(200) COLLATE latin1_general_ci DEFAULT 'Unknown',
   `book` varchar(200) COLLATE latin1_general_ci DEFAULT 'Unknown',
   `device` enum('Chemistry Table','Engraved Desk','Forge','Stove & Keg','Sewing Table & Mannequin','Woodworking Table','Work Bench') CHARACTER SET utf8 NOT NULL,
-  `product_classes` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `unknown2` int(10) unsigned NOT NULL DEFAULT '0',
-  `unknown3` int(10) unsigned NOT NULL DEFAULT '0',
-  `unknown4` int(10) unsigned NOT NULL DEFAULT '0',
+  `product_classes` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `unknown2` int(10) unsigned NOT NULL DEFAULT 0,
+  `unknown3` int(10) unsigned NOT NULL DEFAULT 0,
+  `unknown4` int(10) unsigned NOT NULL DEFAULT 0,
   `product_item_id` int(10) NOT NULL,
   `product_name` varchar(200) COLLATE latin1_general_ci DEFAULT NULL,
   `product_qty` smallint(5) unsigned NOT NULL,

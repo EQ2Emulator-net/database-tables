@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,14 +14,14 @@ DROP TABLE IF EXISTS `guild_event_filters`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `guild_event_filters` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `guild_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `event_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `retain` tinyint(1) unsigned NOT NULL DEFAULT '1',
-  `broadcast` tinyint(1) unsigned NOT NULL DEFAULT '1',
+  `guild_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `event_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `retain` tinyint(1) unsigned NOT NULL DEFAULT 1,
+  `broadcast` tinyint(1) unsigned NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`),
   UNIQUE KEY `FilterEventIDX` (`guild_id`,`event_id`),
   CONSTRAINT `FK_guild_event_filters` FOREIGN KEY (`guild_id`) REFERENCES `guilds` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=187 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=187 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

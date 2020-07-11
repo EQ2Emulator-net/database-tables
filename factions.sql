@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -17,9 +17,9 @@ CREATE TABLE `factions` (
   `name` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   `type` varchar(32) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   `description` text COLLATE latin1_general_ci NOT NULL,
-  `default_level` mediumint(9) NOT NULL DEFAULT '0',
-  `negative_change` smallint(5) unsigned NOT NULL DEFAULT '100',
-  `positive_change` smallint(5) unsigned NOT NULL DEFAULT '75',
+  `default_level` mediumint(9) NOT NULL DEFAULT 0,
+  `negative_change` smallint(5) unsigned NOT NULL DEFAULT 100,
+  `positive_change` smallint(5) unsigned NOT NULL DEFAULT 75,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=356 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;

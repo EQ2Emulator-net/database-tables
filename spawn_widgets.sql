@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -15,28 +15,28 @@ DROP TABLE IF EXISTS `spawn_widgets`;
 CREATE TABLE `spawn_widgets` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `spawn_id` int(10) unsigned NOT NULL,
-  `widget_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `widget_x` float NOT NULL DEFAULT '0',
-  `widget_y` float NOT NULL DEFAULT '0',
-  `widget_z` float NOT NULL DEFAULT '0',
-  `include_heading` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `include_location` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `icon` tinyint(3) unsigned NOT NULL DEFAULT '4',
+  `widget_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `widget_x` float NOT NULL DEFAULT 0,
+  `widget_y` float NOT NULL DEFAULT 0,
+  `widget_z` float NOT NULL DEFAULT 0,
+  `include_heading` tinyint(3) unsigned NOT NULL DEFAULT 1,
+  `include_location` tinyint(3) unsigned NOT NULL DEFAULT 1,
+  `icon` tinyint(3) unsigned NOT NULL DEFAULT 4,
   `type` enum('Generic','Door','Lift') COLLATE latin1_general_ci NOT NULL DEFAULT 'Generic',
-  `open_heading` float NOT NULL DEFAULT '-1',
-  `closed_heading` float NOT NULL DEFAULT '-1',
-  `open_x` float NOT NULL DEFAULT '0',
-  `open_y` float NOT NULL DEFAULT '0',
-  `open_z` float NOT NULL DEFAULT '0',
-  `action_spawn_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `open_heading` float NOT NULL DEFAULT -1,
+  `closed_heading` float NOT NULL DEFAULT -1,
+  `open_x` float NOT NULL DEFAULT 0,
+  `open_y` float NOT NULL DEFAULT 0,
+  `open_z` float NOT NULL DEFAULT 0,
+  `action_spawn_id` int(10) unsigned NOT NULL DEFAULT 0,
   `open_sound_file` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '0',
   `close_sound_file` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '0',
-  `open_duration` smallint(5) unsigned NOT NULL DEFAULT '10',
+  `open_duration` smallint(5) unsigned NOT NULL DEFAULT 10,
   `close_x` float NOT NULL,
-  `close_y` float NOT NULL DEFAULT '0',
-  `close_z` float NOT NULL DEFAULT '0',
-  `linked_spawn_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `house_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `close_y` float NOT NULL DEFAULT 0,
+  `close_z` float NOT NULL DEFAULT 0,
+  `linked_spawn_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `house_id` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `SpawnIDX` (`spawn_id`),
   KEY `WidgetIDX` (`widget_id`),

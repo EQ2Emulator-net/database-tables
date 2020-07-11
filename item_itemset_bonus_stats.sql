@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,16 +14,16 @@ DROP TABLE IF EXISTS `item_itemset_bonus_stats`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `item_itemset_bonus_stats` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `set_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `master_item_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `items_needed` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `type` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `subtype` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `value` smallint(5) NOT NULL DEFAULT '0',
-  `value2` float DEFAULT '0',
+  `set_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `master_item_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `items_needed` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `type` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `subtype` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `value` smallint(5) NOT NULL DEFAULT 0,
+  `value2` float DEFAULT 0,
   `name` varchar(512) COLLATE latin1_general_ci DEFAULT '',
-  `unknown` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `stats_order` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `unknown` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `stats_order` tinyint(3) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;

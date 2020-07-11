@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -15,15 +15,15 @@ DROP TABLE IF EXISTS `char_colors`;
 CREATE TABLE `char_colors` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `char_id` int(10) unsigned NOT NULL,
-  `signed_value` tinyint(4) NOT NULL DEFAULT '0',
-  `type` varchar(32) COLLATE latin1_general_ci NOT NULL,
-  `red` smallint(6) NOT NULL DEFAULT '0',
-  `green` smallint(6) NOT NULL DEFAULT '0',
-  `blue` smallint(6) NOT NULL DEFAULT '0',
+  `signed_value` tinyint(4) NOT NULL DEFAULT 0,
+  `type` varchar(32) NOT NULL,
+  `red` smallint(6) NOT NULL DEFAULT 0,
+  `green` smallint(6) NOT NULL DEFAULT 0,
+  `blue` smallint(6) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `FK_char_colors` (`char_id`),
   CONSTRAINT `FK_char_colors` FOREIGN KEY (`char_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=41784 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=43194 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

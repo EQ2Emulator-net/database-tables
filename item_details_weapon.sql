@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,17 +14,17 @@ DROP TABLE IF EXISTS `item_details_weapon`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `item_details_weapon` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `item_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `wield_style` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `damage_type` tinyint(5) unsigned NOT NULL DEFAULT '0',
-  `damage_low1` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `damage_high1` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `damage_low2` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `damage_high2` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `damage_low3` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `damage_high3` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `delay` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `damage_rating` float NOT NULL DEFAULT '0',
+  `item_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `wield_style` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `damage_type` tinyint(5) unsigned NOT NULL DEFAULT 0,
+  `damage_low1` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `damage_high1` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `damage_low2` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `damage_high2` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `damage_low3` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `damage_high3` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `delay` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `damage_rating` float NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `ItemIndex` (`item_id`),
   CONSTRAINT `FK_item_details_weapon` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE

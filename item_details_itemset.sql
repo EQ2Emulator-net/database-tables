@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,12 +14,12 @@ DROP TABLE IF EXISTS `item_details_itemset`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `item_details_itemset` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `itemset_item_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `item_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `item_icon` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `item_stack_size` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `item_list_color` int(10) NOT NULL DEFAULT '0',
-  `language_type` tinyint(3) NOT NULL DEFAULT '0',
+  `itemset_item_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `item_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `item_icon` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `item_stack_size` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `item_list_color` int(10) NOT NULL DEFAULT 0,
+  `language_type` tinyint(3) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `ItemsetIDX` (`itemset_item_id`,`item_id`,`language_type`),
   CONSTRAINT `FK_item_details_itemset` FOREIGN KEY (`itemset_item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE

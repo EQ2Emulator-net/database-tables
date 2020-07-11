@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -16,10 +16,10 @@ CREATE TABLE `loot_global` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `type` enum('Level','Racial','Zone') COLLATE latin1_general_ci NOT NULL DEFAULT 'Zone',
   `loot_table` int(10) unsigned NOT NULL,
-  `value1` int(10) unsigned NOT NULL DEFAULT '0',
-  `value2` int(10) unsigned NOT NULL DEFAULT '0',
-  `value3` int(10) unsigned NOT NULL DEFAULT '0',
-  `value4` int(10) unsigned NOT NULL DEFAULT '0',
+  `value1` int(10) unsigned NOT NULL DEFAULT 0,
+  `value2` int(10) unsigned NOT NULL DEFAULT 0,
+  `value3` int(10) unsigned NOT NULL DEFAULT 0,
+  `value4` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `FKLootTable` (`loot_table`),
   CONSTRAINT `FKLootTable` FOREIGN KEY (`loot_table`) REFERENCES `loottable` (`id`) ON DELETE CASCADE ON UPDATE CASCADE

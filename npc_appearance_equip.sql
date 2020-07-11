@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,19 +14,19 @@ DROP TABLE IF EXISTS `npc_appearance_equip`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `npc_appearance_equip` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `spawn_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `slot_id` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `equip_type` int(10) unsigned NOT NULL DEFAULT '0',
-  `red` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `green` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `blue` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `highlight_red` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `highlight_green` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `highlight_blue` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `spawn_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `slot_id` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `equip_type` int(10) unsigned NOT NULL DEFAULT 0,
+  `red` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `green` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `blue` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `highlight_red` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `highlight_green` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `highlight_blue` tinyint(3) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `NewIndex` (`spawn_id`,`slot_id`),
   CONSTRAINT `FK_npc_equipment` FOREIGN KEY (`spawn_id`) REFERENCES `spawn` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=88292 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=88318 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

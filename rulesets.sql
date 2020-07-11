@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -16,7 +16,7 @@ CREATE TABLE `rulesets` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `ruleset_id` int(10) unsigned NOT NULL,
   `ruleset_name` varchar(64) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT 'default_ruleset',
-  `ruleset_active` tinyint(1) unsigned NOT NULL DEFAULT '1',
+  `ruleset_active` tinyint(1) unsigned NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`),
   UNIQUE KEY `RuleNameIDX` (`ruleset_name`),
   KEY `RulesIDX` (`ruleset_id`)

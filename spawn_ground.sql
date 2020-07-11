@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,16 +14,16 @@ DROP TABLE IF EXISTS `spawn_ground`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `spawn_ground` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `spawn_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `number_harvests` tinyint(3) unsigned NOT NULL DEFAULT '3',
-  `num_attempts_per_harvest` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `groundspawn_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `spawn_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `number_harvests` tinyint(3) unsigned NOT NULL DEFAULT 3,
+  `num_attempts_per_harvest` tinyint(3) unsigned NOT NULL DEFAULT 1,
+  `groundspawn_id` int(10) unsigned NOT NULL DEFAULT 0,
   `collection_skill` enum('Unused','Mining','Gathering','Fishing','Trapping','Foresting','Collecting') COLLATE latin1_general_ci NOT NULL DEFAULT 'Unused',
   PRIMARY KEY (`id`),
   UNIQUE KEY `SpawnIdx` (`spawn_id`),
   KEY `GroundIDX` (`groundspawn_id`),
   CONSTRAINT `FK_groundspawn` FOREIGN KEY (`spawn_id`) REFERENCES `spawn` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1126 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1127 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

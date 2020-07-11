@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -15,14 +15,14 @@ DROP TABLE IF EXISTS `spell_aa_list`;
 CREATE TABLE `spell_aa_list` (
   `list_id` int(10) unsigned NOT NULL,
   `name` varchar(64) NOT NULL DEFAULT '',
-  `level` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `maximumpoints` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `maxpoints` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `minimumpointsrequired` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `iswardertree` tinyint(1) NOT NULL DEFAULT '0',
-  `last_update` float NOT NULL DEFAULT '0',
+  `level` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `maximumpoints` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `maxpoints` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `minimumpointsrequired` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `iswardertree` tinyint(1) NOT NULL DEFAULT 0,
+  `last_update` float NOT NULL DEFAULT 0,
   `ts` float NOT NULL,
-  `version` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `version` tinyint(3) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`list_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;

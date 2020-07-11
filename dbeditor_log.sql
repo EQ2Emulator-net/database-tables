@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -19,9 +19,9 @@ CREATE TABLE `dbeditor_log` (
   `admin_status` smallint(5) unsigned NOT NULL,
   `item_name` varchar(250) COLLATE latin1_general_ci DEFAULT NULL,
   `table_name` varchar(32) COLLATE latin1_general_ci DEFAULT NULL,
-  `update_query` text COLLATE latin1_general_ci,
+  `update_query` text COLLATE latin1_general_ci DEFAULT NULL,
   `update_date` int(11) unsigned NOT NULL,
-  `archived` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `archived` tinyint(1) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7315 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;

@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,13 +14,13 @@ DROP TABLE IF EXISTS `entity_commands`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `entity_commands` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `command_list_id` int(10) unsigned NOT NULL DEFAULT '1',
+  `command_list_id` int(10) unsigned NOT NULL DEFAULT 1,
   `command_text` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT 'Hail',
-  `distance` float unsigned NOT NULL DEFAULT '0',
+  `distance` float unsigned NOT NULL DEFAULT 0,
   `command` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT 'hail',
   `error_text` varchar(64) COLLATE latin1_general_ci NOT NULL,
-  `cast_time` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `spell_visual` int(10) unsigned NOT NULL DEFAULT '0',
+  `cast_time` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `spell_visual` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `EntityCmdIDX` (`command_list_id`,`command_text`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1329 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

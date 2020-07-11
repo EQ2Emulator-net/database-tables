@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,11 +14,11 @@ DROP TABLE IF EXISTS `item_details_house`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `item_details_house` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `item_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `rent_reduction` int(10) unsigned NOT NULL DEFAULT '0',
-  `status_rent_reduction` int(10) unsigned NOT NULL DEFAULT '0',
-  `coin_rent_reduction` float NOT NULL DEFAULT '0',
-  `house_only` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `item_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `rent_reduction` int(10) unsigned NOT NULL DEFAULT 0,
+  `status_rent_reduction` int(10) unsigned NOT NULL DEFAULT 0,
+  `coin_rent_reduction` float NOT NULL DEFAULT 0,
+  `house_only` tinyint(3) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `NewIndex` (`item_id`),
   CONSTRAINT `FK_item_details_house` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE

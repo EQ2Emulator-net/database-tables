@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,16 +14,16 @@ DROP TABLE IF EXISTS `starting_spells`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `starting_spells` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `race_id` tinyint(3) unsigned NOT NULL DEFAULT '255',
-  `class_id` tinyint(3) unsigned NOT NULL DEFAULT '255',
-  `spell_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `tier` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `knowledge_slot` mediumint(9) NOT NULL DEFAULT '-1',
+  `race_id` tinyint(3) unsigned NOT NULL DEFAULT 255,
+  `class_id` tinyint(3) unsigned NOT NULL DEFAULT 255,
+  `spell_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `tier` tinyint(3) unsigned NOT NULL DEFAULT 1,
+  `knowledge_slot` mediumint(9) NOT NULL DEFAULT -1,
   PRIMARY KEY (`id`),
   UNIQUE KEY `SpellsIDX` (`race_id`,`class_id`,`spell_id`),
   KEY `FK_starting_spells` (`spell_id`),
   CONSTRAINT `FK_starting_spells` FOREIGN KEY (`spell_id`) REFERENCES `spells` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=280 DEFAULT CHARSET=latin1 CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=278 DEFAULT CHARSET=latin1 CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

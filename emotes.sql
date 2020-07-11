@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -15,7 +15,7 @@ DROP TABLE IF EXISTS `emotes`;
 CREATE TABLE `emotes` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(128) COLLATE latin1_general_ci DEFAULT NULL,
-  `visual_state_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `visual_state_id` int(10) unsigned NOT NULL DEFAULT 0,
   `message` varchar(255) COLLATE latin1_general_ci DEFAULT NULL,
   `targeted_message` varchar(255) COLLATE latin1_general_ci DEFAULT NULL,
   `self_message` varchar(255) COLLATE latin1_general_ci DEFAULT NULL,

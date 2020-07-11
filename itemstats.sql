@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,12 +14,12 @@ DROP TABLE IF EXISTS `itemstats`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `itemstats` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `version_range1` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `version_range2` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `emu_stat` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `version_range1` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `version_range2` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `emu_stat` smallint(5) unsigned NOT NULL DEFAULT 0,
   `name` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '',
-  `stat` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `table_data_version` smallint(5) unsigned NOT NULL DEFAULT '1',
+  `stat` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `table_data_version` smallint(5) unsigned NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`),
   UNIQUE KEY `newindex` (`version_range1`,`name`,`version_range2`)
 ) ENGINE=InnoDB AUTO_INCREMENT=621 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

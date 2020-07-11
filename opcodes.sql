@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,14 +14,14 @@ DROP TABLE IF EXISTS `opcodes`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `opcodes` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `version_range1` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `version_range2` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `version_range1` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `version_range2` smallint(5) unsigned NOT NULL DEFAULT 0,
   `name` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '',
-  `opcode` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `table_data_version` smallint(5) unsigned NOT NULL DEFAULT '1',
+  `opcode` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `table_data_version` smallint(5) unsigned NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`),
   UNIQUE KEY `newindex` (`version_range1`,`name`,`version_range2`)
-) ENGINE=InnoDB AUTO_INCREMENT=29499 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29498 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

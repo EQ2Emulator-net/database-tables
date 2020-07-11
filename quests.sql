@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -17,14 +17,14 @@ CREATE TABLE `quests` (
   `name` varchar(64) COLLATE latin1_general_ci DEFAULT NULL,
   `type` varchar(64) COLLATE latin1_general_ci DEFAULT NULL,
   `zone` varchar(64) COLLATE latin1_general_ci DEFAULT NULL,
-  `level` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `enc_level` tinyint(3) NOT NULL DEFAULT '0',
-  `description` text COLLATE latin1_general_ci,
-  `spawn_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `completed_text` text COLLATE latin1_general_ci,
+  `level` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `enc_level` tinyint(3) NOT NULL DEFAULT 0,
+  `description` text COLLATE latin1_general_ci DEFAULT NULL,
+  `spawn_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `completed_text` text COLLATE latin1_general_ci DEFAULT NULL,
   `lua_script` varchar(255) COLLATE latin1_general_ci DEFAULT NULL,
   PRIMARY KEY (`quest_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=557 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=573 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

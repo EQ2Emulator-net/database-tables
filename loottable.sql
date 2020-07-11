@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -15,13 +15,13 @@ DROP TABLE IF EXISTS `loottable`;
 CREATE TABLE `loottable` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(128) COLLATE latin1_general_ci DEFAULT NULL,
-  `mincoin` int(10) unsigned NOT NULL DEFAULT '0',
-  `maxcoin` int(10) unsigned NOT NULL DEFAULT '0',
-  `maxlootitems` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `lootdrop_probability` float unsigned NOT NULL DEFAULT '100',
-  `coin_probability` float unsigned NOT NULL DEFAULT '100',
+  `mincoin` int(10) unsigned NOT NULL DEFAULT 0,
+  `maxcoin` int(10) unsigned NOT NULL DEFAULT 0,
+  `maxlootitems` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `lootdrop_probability` float unsigned NOT NULL DEFAULT 100,
+  `coin_probability` float unsigned NOT NULL DEFAULT 100,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1836 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1843 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

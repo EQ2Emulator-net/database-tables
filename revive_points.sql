@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -15,18 +15,18 @@ DROP TABLE IF EXISTS `revive_points`;
 CREATE TABLE `revive_points` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `location_name` varchar(64) COLLATE latin1_general_ci DEFAULT NULL,
-  `zone_id` int(10) unsigned NOT NULL DEFAULT '12',
-  `respawn_zone_id` int(10) unsigned NOT NULL DEFAULT '12',
-  `safe_x` float NOT NULL DEFAULT '0',
-  `safe_y` float NOT NULL DEFAULT '0',
-  `safe_z` float NOT NULL DEFAULT '0',
-  `heading` float NOT NULL DEFAULT '0',
+  `zone_id` int(10) unsigned NOT NULL DEFAULT 12,
+  `respawn_zone_id` int(10) unsigned NOT NULL DEFAULT 12,
+  `safe_x` float NOT NULL DEFAULT 0,
+  `safe_y` float NOT NULL DEFAULT 0,
+  `safe_z` float NOT NULL DEFAULT 0,
+  `heading` float NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `FK_respawn_points` (`respawn_zone_id`),
   KEY `FK_revive_zone` (`zone_id`),
   CONSTRAINT `FK_respawn_points` FOREIGN KEY (`respawn_zone_id`) REFERENCES `zones` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_revive_zone` FOREIGN KEY (`zone_id`) REFERENCES `zones` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=158 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=160 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

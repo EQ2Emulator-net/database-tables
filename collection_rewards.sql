@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,10 +14,10 @@ DROP TABLE IF EXISTS `collection_rewards`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `collection_rewards` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `collection_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `collection_id` int(10) unsigned NOT NULL DEFAULT 0,
   `reward_type` enum('None','Item','Selectable','Coin','XP') COLLATE latin1_general_ci NOT NULL DEFAULT 'None',
-  `reward_value` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `reward_quantity` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `reward_value` bigint(20) unsigned NOT NULL DEFAULT 0,
+  `reward_quantity` tinyint(3) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `FK_collection_rewards` (`collection_id`),
   CONSTRAINT `FK_collection_rewards` FOREIGN KEY (`collection_id`) REFERENCES `collections` (`id`) ON DELETE CASCADE ON UPDATE CASCADE

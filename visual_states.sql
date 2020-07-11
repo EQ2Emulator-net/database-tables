@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,9 +14,9 @@ DROP TABLE IF EXISTS `visual_states`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `visual_states` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `visual_state_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `visual_state_id` int(10) unsigned NOT NULL DEFAULT 0,
   `name` varchar(250) COLLATE latin1_general_ci NOT NULL DEFAULT 'None',
-  `min_client_version` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `min_client_version` smallint(5) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `VisIDX` (`visual_state_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21671 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

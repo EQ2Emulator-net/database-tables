@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,14 +14,14 @@ DROP TABLE IF EXISTS `item_appearances`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `item_appearances` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `item_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `equip_type` int(10) unsigned NOT NULL DEFAULT '0',
-  `red` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `green` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `blue` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `highlight_red` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `highlight_green` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `highlight_blue` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `item_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `equip_type` int(10) unsigned NOT NULL DEFAULT 0,
+  `red` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `green` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `blue` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `highlight_red` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `highlight_green` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `highlight_blue` tinyint(3) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `NewIndex` (`item_id`),
   CONSTRAINT `FK_item_appearances` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE

@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,10 +14,10 @@ DROP TABLE IF EXISTS `guild_ranks_defaults`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `guild_ranks_defaults` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `rank_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `rank_id` int(10) unsigned NOT NULL DEFAULT 0,
   `rank_name` varchar(250) COLLATE latin1_general_ci NOT NULL,
-  `permission1` int(10) unsigned NOT NULL DEFAULT '0',
-  `permission2` int(10) unsigned NOT NULL DEFAULT '0',
+  `permission1` int(10) unsigned NOT NULL DEFAULT 0,
+  `permission2` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `RankNameIDX` (`rank_name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

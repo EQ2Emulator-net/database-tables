@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,21 +14,21 @@ DROP TABLE IF EXISTS `groundspawns`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `groundspawns` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `groundspawn_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `min_skill_level` smallint(5) unsigned NOT NULL DEFAULT '1',
-  `min_adventure_level` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `bonus_table` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `harvest1` float NOT NULL DEFAULT '70',
-  `harvest3` float NOT NULL DEFAULT '20',
-  `harvest5` float NOT NULL DEFAULT '8',
-  `harvest_imbue` float NOT NULL DEFAULT '1',
-  `harvest_rare` float NOT NULL DEFAULT '0.7',
-  `harvest10` float NOT NULL DEFAULT '0.3',
-  `harvest_coin` int(10) unsigned NOT NULL DEFAULT '0',
-  `enabled` tinyint(1) unsigned NOT NULL DEFAULT '1',
+  `groundspawn_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `min_skill_level` smallint(5) unsigned NOT NULL DEFAULT 1,
+  `min_adventure_level` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `bonus_table` tinyint(1) unsigned NOT NULL DEFAULT 0,
+  `harvest1` float NOT NULL DEFAULT 70,
+  `harvest3` float NOT NULL DEFAULT 20,
+  `harvest5` float NOT NULL DEFAULT 8,
+  `harvest_imbue` float NOT NULL DEFAULT 1,
+  `harvest_rare` float NOT NULL DEFAULT 0.7,
+  `harvest10` float NOT NULL DEFAULT 0.3,
+  `harvest_coin` int(10) unsigned NOT NULL DEFAULT 0,
+  `enabled` tinyint(1) unsigned NOT NULL DEFAULT 1,
   `tablename` varchar(64) COLLATE latin1_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=180 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=181 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

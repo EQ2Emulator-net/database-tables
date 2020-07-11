@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,9 +14,9 @@ DROP TABLE IF EXISTS `spawn_npc_spells`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `spawn_npc_spells` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `spell_list_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `spell_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `spell_tier` tinyint(3) unsigned NOT NULL DEFAULT '1',
+  `spell_list_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `spell_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `spell_tier` tinyint(3) unsigned NOT NULL DEFAULT 1,
   `description` varchar(64) COLLATE latin1_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `ListSpellIDX` (`spell_list_id`,`spell_id`),

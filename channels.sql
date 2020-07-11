@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -16,9 +16,9 @@ CREATE TABLE `channels` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(128) COLLATE latin1_general_ci NOT NULL,
   `password` varchar(128) COLLATE latin1_general_ci DEFAULT NULL,
-  `level_restriction` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `classes` bigint(20) unsigned NOT NULL DEFAULT '0',
-  `races` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `level_restriction` mediumint(8) unsigned NOT NULL DEFAULT 0,
+  `classes` bigint(20) unsigned NOT NULL DEFAULT 0,
+  `races` bigint(20) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `uk_channels_name` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

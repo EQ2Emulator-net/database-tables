@@ -2,7 +2,7 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -14,9 +14,9 @@ DROP TABLE IF EXISTS `character_achievements`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `character_achievements` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
-  `char_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `achievement_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `completed_date` int(10) unsigned NOT NULL DEFAULT '0',
+  `char_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `achievement_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `completed_date` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `FK_character_achievements` (`char_id`),
   CONSTRAINT `FK_character_achievements` FOREIGN KEY (`char_id`) REFERENCES `characters` (`id`) ON UPDATE CASCADE
