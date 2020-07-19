@@ -23,7 +23,7 @@ CREATE TABLE `item_details_itemset` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `ItemsetIDX` (`itemset_item_id`,`item_id`,`language_type`),
   CONSTRAINT `FK_item_details_itemset` FOREIGN KEY (`itemset_item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2154 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2302 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
