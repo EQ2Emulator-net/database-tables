@@ -19,9 +19,10 @@ CREATE TABLE `emotes` (
   `message` varchar(255) COLLATE latin1_general_ci DEFAULT NULL,
   `targeted_message` varchar(255) COLLATE latin1_general_ci DEFAULT NULL,
   `self_message` varchar(255) COLLATE latin1_general_ci DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `EmoteIDX` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=184 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+  `min_version_range` int(10) unsigned NOT NULL DEFAULT 0,
+  `max_version_range` int(10) unsigned NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=326 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

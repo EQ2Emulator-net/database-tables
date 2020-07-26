@@ -23,7 +23,7 @@ CREATE TABLE `char_colors` (
   PRIMARY KEY (`id`),
   KEY `FK_char_colors` (`char_id`),
   CONSTRAINT `FK_char_colors` FOREIGN KEY (`char_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=43899 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=43993 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
