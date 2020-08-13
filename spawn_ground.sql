@@ -23,7 +23,7 @@ CREATE TABLE `spawn_ground` (
   UNIQUE KEY `SpawnIdx` (`spawn_id`),
   KEY `GroundIDX` (`groundspawn_id`),
   CONSTRAINT `FK_groundspawn` FOREIGN KEY (`spawn_id`) REFERENCES `spawn` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1127 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1128 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
