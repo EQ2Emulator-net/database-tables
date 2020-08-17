@@ -22,7 +22,7 @@ CREATE TABLE `starting_zones` (
   UNIQUE KEY `NewIndex` (`class_id`,`race_id`,`zone_id`,`choice`),
   KEY `FK_starting_zones` (`zone_id`),
   CONSTRAINT `FK_starting_zones` FOREIGN KEY (`zone_id`) REFERENCES `zones` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
