@@ -9,19 +9,14 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-DROP TABLE IF EXISTS `statistics`;
+DROP TABLE IF EXISTS `CharactersProperties`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `statistics` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `char_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `guild_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `stat_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `stat_value` double NOT NULL DEFAULT 0,
-  `stat_date` int(11) unsigned NOT NULL DEFAULT 0,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `characterIDX` (`char_id`,`guild_id`,`stat_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10937267 DEFAULT CHARSET=utf8;
+CREATE TABLE `CharactersProperties` (
+  `charid` int(10) unsigned NOT NULL DEFAULT 0,
+  `propname` varchar(64) NOT NULL DEFAULT '',
+  `propvalue` varchar(64) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
