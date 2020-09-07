@@ -26,7 +26,7 @@ CREATE TABLE `guild_events` (
   UNIQUE KEY `GuildIDX` (`guild_id`,`event_id`),
   KEY `EventDateIDX` (`event_date`),
   CONSTRAINT `FK_guild_events` FOREIGN KEY (`guild_id`) REFERENCES `guilds` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1935 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1936 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
