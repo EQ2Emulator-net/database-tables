@@ -21,7 +21,7 @@ CREATE TABLE `opcodes` (
   `table_data_version` smallint(5) unsigned NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`),
   UNIQUE KEY `newindex` (`version_range1`,`name`,`version_range2`)
-) ENGINE=InnoDB AUTO_INCREMENT=29498 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30943 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
