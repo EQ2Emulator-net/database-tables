@@ -24,7 +24,7 @@ CREATE TABLE `starting_skills` (
   UNIQUE KEY `RaceClassIDX` (`race_id`,`class_id`,`skill_id`),
   KEY `FK_starting_skills` (`skill_id`),
   CONSTRAINT `FK_starting_skills` FOREIGN KEY (`skill_id`) REFERENCES `skills` (`id`) ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=163 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=165 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

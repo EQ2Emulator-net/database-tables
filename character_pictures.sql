@@ -19,7 +19,7 @@ CREATE TABLE `character_pictures` (
   `picture` mediumtext COLLATE latin1_general_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `character_pic_id` (`char_id`,`pic_type`)
-) ENGINE=InnoDB AUTO_INCREMENT=14818 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14820 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

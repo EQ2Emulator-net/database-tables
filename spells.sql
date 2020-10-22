@@ -29,6 +29,7 @@ CREATE TABLE `spells` (
   `target_type` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `success_message` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   `fade_message` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `fade_message_others` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   `interruptable` tinyint(1) unsigned NOT NULL DEFAULT 1,
   `cast_while_moving` tinyint(1) unsigned NOT NULL DEFAULT 0,
   `lua_script` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '',

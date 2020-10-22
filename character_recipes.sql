@@ -22,7 +22,7 @@ CREATE TABLE `character_recipes` (
   KEY `fk_characterrecipes_recipeid` (`recipe_id`),
   CONSTRAINT `fk_characterrecipes_charid` FOREIGN KEY (`char_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_characterrecipes_recipeid` FOREIGN KEY (`recipe_id`) REFERENCES `recipes` (`recipe_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3911 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3960 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
