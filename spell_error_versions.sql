@@ -20,7 +20,7 @@ CREATE TABLE `spell_error_versions` (
   `name` char(64) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   UNIQUE KEY `SpellErrorIDX` (`version`,`error_index`)
-) ENGINE=InnoDB AUTO_INCREMENT=329 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=385 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
