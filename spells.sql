@@ -61,7 +61,7 @@ CREATE TABLE `spells` (
   KEY `SpellIDX` (`name`),
   KEY `SpellLUAIDX` (`lua_script`),
   KEY `SpellSkillsIDX` (`class_skill`,`mastery_skill`)
-) ENGINE=InnoDB AUTO_INCREMENT=2550003 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2550377 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
