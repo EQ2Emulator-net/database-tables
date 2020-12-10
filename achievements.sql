@@ -26,6 +26,7 @@ CREATE TABLE `achievements` (
   `hide_achievement` tinyint(1) unsigned NOT NULL DEFAULT 0,
   `unknown3a` int(10) unsigned NOT NULL DEFAULT 0,
   `unknown3b` int(10) unsigned NOT NULL DEFAULT 0,
+  `max_version` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `AchievementTitleIDX` (`achievement_id`,`title`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1170 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
