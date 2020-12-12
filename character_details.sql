@@ -74,8 +74,8 @@ CREATE TABLE `character_details` (
   `biography` varchar(512) NOT NULL DEFAULT '',
   `flags` int(10) unsigned NOT NULL DEFAULT 301465665,
   `flags2` int(10) unsigned NOT NULL DEFAULT 40,
-  `prefix_title` smallint(5) NOT NULL DEFAULT -1,
-  `suffix_title` smallint(5) NOT NULL DEFAULT -1,
+  `prefix_title` int(10) NOT NULL DEFAULT -1,
+  `suffix_title` int(10) NOT NULL DEFAULT -1,
   `current_language` smallint(5) NOT NULL DEFAULT 0,
   `last_name` varchar(64) NOT NULL DEFAULT '',
   `assigned_aa` smallint(5) NOT NULL DEFAULT 0,
@@ -89,7 +89,7 @@ CREATE TABLE `character_details` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `CharIDX` (`char_id`),
   CONSTRAINT `FK_character_details` FOREIGN KEY (`char_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1076 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1081 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
