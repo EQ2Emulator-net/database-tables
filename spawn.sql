@@ -48,6 +48,7 @@ CREATE TABLE `spawn` (
   `merchant_min_level` int(10) unsigned NOT NULL DEFAULT 0,
   `merchant_max_level` int(10) unsigned NOT NULL DEFAULT 0,
   `holiday_flag` int(10) unsigned NOT NULL DEFAULT 0,
+  `aaxp_rewards` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `SpawnIDX` (`name`),
   KEY `SpawnCmdIDX` (`command_primary`,`command_secondary`),
