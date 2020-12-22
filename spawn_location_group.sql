@@ -21,7 +21,7 @@ CREATE TABLE `spawn_location_group` (
   UNIQUE KEY `GroupPlacementIDX` (`group_id`,`placement_id`),
   KEY `FK_group_placement` (`placement_id`),
   CONSTRAINT `FK_group_placement` FOREIGN KEY (`placement_id`) REFERENCES `spawn_location_placement` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=90184 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=90217 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

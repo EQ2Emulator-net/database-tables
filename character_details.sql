@@ -73,7 +73,7 @@ CREATE TABLE `character_details` (
   `emote_voice` smallint(5) unsigned NOT NULL DEFAULT 1060,
   `biography` varchar(512) NOT NULL DEFAULT '',
   `flags` int(10) unsigned NOT NULL DEFAULT 301465665,
-  `flags2` int(10) unsigned NOT NULL DEFAULT 40,
+  `flags2` int(10) unsigned NOT NULL DEFAULT 131112,
   `prefix_title` int(10) NOT NULL DEFAULT -1,
   `suffix_title` int(10) NOT NULL DEFAULT -1,
   `current_language` smallint(5) NOT NULL DEFAULT 0,
