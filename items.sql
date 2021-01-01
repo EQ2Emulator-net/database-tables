@@ -85,6 +85,7 @@ CREATE TABLE `items` (
   `soe_item_crc` int(10) NOT NULL DEFAULT 0,
   `lua_script` varchar(255) COLLATE latin1_general_ci DEFAULT NULL,
   `harvest` tinyint(3) unsigned DEFAULT 0,
+  `body_drop` tinyint(3) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `ItemIDX` (`soe_item_id`),
   KEY `ItemTypeIDX` (`item_type`),
