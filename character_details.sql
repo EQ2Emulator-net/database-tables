@@ -53,7 +53,7 @@ CREATE TABLE `character_details` (
   `max_dissonance` int(10) unsigned NOT NULL DEFAULT 0,
   `xp` int(10) unsigned NOT NULL DEFAULT 0,
   `xp_needed` int(10) unsigned NOT NULL DEFAULT 0,
-  `xp_debt` int(10) unsigned NOT NULL DEFAULT 0,
+  `xp_debt` float NOT NULL DEFAULT 0,
   `xp_vitality` float unsigned NOT NULL DEFAULT 0,
   `tradeskill_xp` int(10) unsigned NOT NULL DEFAULT 0,
   `tradeskill_xp_needed` int(10) unsigned NOT NULL DEFAULT 0,

@@ -21,7 +21,7 @@ CREATE TABLE `commands` (
   `required_status` smallint(5) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `CommandIDX` (`command`,`subcommand`)
-) ENGINE=InnoDB AUTO_INCREMENT=526 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=527 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
