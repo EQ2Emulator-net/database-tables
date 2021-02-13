@@ -18,7 +18,7 @@ CREATE TABLE `character_items` (
   `account_id` int(10) unsigned NOT NULL DEFAULT 0,
   `char_id` int(10) unsigned NOT NULL DEFAULT 0,
   `bag_id` int(11) NOT NULL DEFAULT 0,
-  `slot` smallint(6) NOT NULL DEFAULT 0,
+  `slot` int(11) NOT NULL DEFAULT 0,
   `item_id` int(10) unsigned NOT NULL DEFAULT 0,
   `creator` varchar(64) NOT NULL DEFAULT '',
   `condition_` tinyint(3) unsigned NOT NULL DEFAULT 100,
