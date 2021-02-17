@@ -53,7 +53,7 @@ CREATE TABLE `spawn` (
   KEY `SpawnIDX` (`name`),
   KEY `SpawnCmdIDX` (`command_primary`,`command_secondary`),
   KEY `SpawnMiscIDX` (`faction_id`,`merchant_id`,`transport_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8180023 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8180026 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

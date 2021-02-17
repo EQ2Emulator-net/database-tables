@@ -63,10 +63,12 @@ CREATE TABLE `spawn_npcs` (
   `cast_percentage` tinyint(3) unsigned NOT NULL DEFAULT 10,
   `randomize` int(10) unsigned NOT NULL DEFAULT 0,
   `alignment` tinyint(3) NOT NULL DEFAULT 0,
+  `water_type` tinyint(1) unsigned NOT NULL DEFAULT 0,
+  `flying_type` tinyint(1) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `SpawnIDX` (`spawn_id`),
   CONSTRAINT `FK_npcs_spawn` FOREIGN KEY (`spawn_id`) REFERENCES `spawn` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=35915 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=35921 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
