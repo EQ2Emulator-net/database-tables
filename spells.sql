@@ -57,6 +57,7 @@ CREATE TABLE `spells` (
   `spell_type` enum('Unset','DD','DoT','Heal','HoT-Ward','Debuff','Buff','CombatBuff','Taunt','Detaunt','Rez','Cure') COLLATE latin1_general_ci DEFAULT 'Unset',
   `last_auto_update` int(10) unsigned NOT NULL DEFAULT 0,
   `soe_last_update` int(10) unsigned NOT NULL DEFAULT 0,
+  `type_group_spell_id` int(10) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `SpellIDX` (`name`),
   KEY `SpellLUAIDX` (`lua_script`),
