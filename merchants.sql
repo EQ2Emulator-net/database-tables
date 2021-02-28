@@ -19,7 +19,7 @@ CREATE TABLE `merchants` (
   `description` varchar(64) COLLATE latin1_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `MerchantInventoryIDX` (`inventory_id`,`merchant_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1339 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1340 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
