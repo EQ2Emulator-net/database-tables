@@ -38,12 +38,13 @@ CREATE TABLE `character_items` (
   `adorn8` int(10) unsigned NOT NULL DEFAULT 0,
   `adorn9` int(10) unsigned NOT NULL DEFAULT 0,
   `adorn10` int(10) unsigned NOT NULL DEFAULT 0,
+  `no_sale` tinyint(1) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `NewIndex` (`char_id`,`type`,`bag_id`,`slot`),
   KEY `FK_items` (`item_id`),
   CONSTRAINT `FK_character_items` FOREIGN KEY (`char_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_items` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4406518 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4411708 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

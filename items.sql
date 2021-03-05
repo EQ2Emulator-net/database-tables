@@ -86,8 +86,8 @@ CREATE TABLE `items` (
   `lua_script` varchar(255) COLLATE latin1_general_ci DEFAULT NULL,
   `harvest` tinyint(3) unsigned DEFAULT 0,
   `body_drop` tinyint(3) NOT NULL DEFAULT 0,
+  `no_buy_back` tinyint(1) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `ItemIDX` (`soe_item_id`),
   KEY `ItemTypeIDX` (`item_type`),
   KEY `ItemNameIDX` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=192189 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
