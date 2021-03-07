@@ -9,23 +9,18 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-DROP TABLE IF EXISTS `character_skillbar`;
+DROP TABLE IF EXISTS `character_spell_effect_targets`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `character_skillbar` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `char_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `type` tinyint(3) unsigned NOT NULL DEFAULT 1,
-  `hotbar` int(10) unsigned NOT NULL DEFAULT 0,
+CREATE TABLE `character_spell_effect_targets` (
+  `caster_char_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `target_char_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `target_type` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `db_effect_type` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `spell_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `tier` tinyint(3) unsigned NOT NULL DEFAULT 1,
-  `slot` int(10) unsigned NOT NULL DEFAULT 0,
-  `text_val` varchar(255) NOT NULL DEFAULT 'Unused',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `NewIndex` (`hotbar`,`char_id`,`slot`),
-  KEY `FK_character_skillbar` (`char_id`),
-  CONSTRAINT `FK_character_skillbar` FOREIGN KEY (`char_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=15003 DEFAULT CHARSET=utf8;
+  `effect_slot` int(10) unsigned NOT NULL DEFAULT 0,
+  `slot_pos` int(10) unsigned NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
