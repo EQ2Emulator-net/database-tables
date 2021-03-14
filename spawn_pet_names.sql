@@ -17,7 +17,7 @@ CREATE TABLE `spawn_pet_names` (
   `pet_name` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   UNIQUE KEY `PetNameIDX` (`pet_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=1708 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=367 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
