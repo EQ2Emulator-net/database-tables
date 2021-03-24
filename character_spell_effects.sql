@@ -39,7 +39,7 @@ CREATE TABLE `character_spell_effects` (
   `last_spellattack_hit` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `interrupted` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `resisted` tinyint(3) unsigned NOT NULL DEFAULT 0,
-  `custom_function` text NOT NULL DEFAULT 'notset'
+  `custom_function` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
