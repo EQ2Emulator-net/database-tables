@@ -54,7 +54,7 @@ CREATE TABLE `spells` (
   `is_aa` tinyint(1) unsigned NOT NULL DEFAULT 0,
   `is_deity` tinyint(1) unsigned NOT NULL DEFAULT 0,
   `deity` tinyint(3) unsigned NOT NULL DEFAULT 0,
-  `spell_type` enum('Unset','DD','DoT','Heal','HoT-Ward','Debuff','Buff','CombatBuff','Taunt','Detaunt','Rez','Cure','Food','Drink','Root','Snare') COLLATE latin1_general_ci NOT NULL DEFAULT 'Unset',
+  `spell_type` enum('Unset','DD','DoT','Heal','HoT-Ward','Debuff','Buff','CombatBuff','Taunt','Detaunt','Rez','Cure','Food','Drink','Root','Snare','GroupTarget') COLLATE latin1_general_ci NOT NULL DEFAULT 'Unset',
   `last_auto_update` int(10) unsigned NOT NULL DEFAULT 0,
   `soe_last_update` int(10) unsigned NOT NULL DEFAULT 0,
   `type_group_spell_id` int(10) NOT NULL DEFAULT 0,
