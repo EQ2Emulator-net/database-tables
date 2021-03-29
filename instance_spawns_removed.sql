@@ -23,7 +23,7 @@ CREATE TABLE `instance_spawns_removed` (
   KEY `SpawnIDX` (`spawn_location_entry_id`),
   CONSTRAINT `FK_instance_spawns` FOREIGN KEY (`spawn_location_entry_id`) REFERENCES `spawn_location_entry` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_instance_zones` FOREIGN KEY (`instance_id`) REFERENCES `instances` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1843 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1859 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
