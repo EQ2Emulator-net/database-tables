@@ -9,21 +9,22 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-DROP TABLE IF EXISTS `instance_spawns_removed`;
+DROP TABLE IF EXISTS `item_mod_strings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `instance_spawns_removed` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `instance_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `spawn_type` smallint(5) unsigned NOT NULL DEFAULT 0,
-  `spawn_location_entry_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `respawn_time` int(10) unsigned NOT NULL DEFAULT 0,
+CREATE TABLE `item_mod_strings` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `item_id` int(10) unsigned NOT NULL,
+  `mod` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `description` text COLLATE latin1_general_ci NOT NULL,
+  `unk1` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `unk2` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `index` tinyint(3) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
-  KEY `InstanceIDX` (`instance_id`),
-  KEY `SpawnIDX` (`spawn_location_entry_id`),
-  CONSTRAINT `FK_instance_spawns` FOREIGN KEY (`spawn_location_entry_id`) REFERENCES `spawn_location_entry` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `FK_instance_zones` FOREIGN KEY (`instance_id`) REFERENCES `instances` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1883 DEFAULT CHARSET=utf8;
+  UNIQUE KEY `UK_itemid_index` (`index`,`item_id`) USING BTREE,
+  KEY `FK_item_mod_strings_items` (`item_id`),
+  CONSTRAINT `FK_item_mod_strings_items` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=42013 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

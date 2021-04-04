@@ -9,21 +9,19 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-DROP TABLE IF EXISTS `instance_spawns_removed`;
+DROP TABLE IF EXISTS `character_house_deposits`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `instance_spawns_removed` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+CREATE TABLE `character_house_deposits` (
+  `timestamp` int(10) unsigned NOT NULL DEFAULT 0,
+  `house_id` int(10) unsigned NOT NULL DEFAULT 0,
   `instance_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `spawn_type` smallint(5) unsigned NOT NULL DEFAULT 0,
-  `spawn_location_entry_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `respawn_time` int(10) unsigned NOT NULL DEFAULT 0,
-  PRIMARY KEY (`id`),
-  KEY `InstanceIDX` (`instance_id`),
-  KEY `SpawnIDX` (`spawn_location_entry_id`),
-  CONSTRAINT `FK_instance_spawns` FOREIGN KEY (`spawn_location_entry_id`) REFERENCES `spawn_location_entry` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `FK_instance_zones` FOREIGN KEY (`instance_id`) REFERENCES `instances` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1883 DEFAULT CHARSET=utf8;
+  `name` varchar(64) NOT NULL DEFAULT '',
+  `amount` bigint(20) unsigned NOT NULL DEFAULT 0,
+  `last_amount` bigint(20) unsigned NOT NULL DEFAULT 0,
+  `status` int(10) unsigned NOT NULL DEFAULT 0,
+  `last_status` int(10) unsigned NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

@@ -14,15 +14,15 @@ DROP TABLE IF EXISTS `item_itemset_bonus_effects`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `item_itemset_bonus_effects` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `set_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `master_item_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `items_needed` tinyint(3) unsigned NOT NULL DEFAULT 0,
-  `subbulletflag` tinyint(3) unsigned NOT NULL DEFAULT 0,
-  `description` varchar(512) COLLATE latin1_general_ci DEFAULT '',
+  `set_bonus_id` int(10) unsigned NOT NULL,
+  `indent` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `description` text COLLATE latin1_general_ci DEFAULT NULL,
   `percentage` tinyint(3) unsigned NOT NULL DEFAULT 100,
   `effect_order` tinyint(3) unsigned NOT NULL DEFAULT 0,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UK_setbonusid_effectorder` (`set_bonus_id`,`effect_order`),
+  CONSTRAINT `FK_item_itemset_bonus_effects_item_itemset_bonus` FOREIGN KEY (`set_bonus_id`) REFERENCES `item_itemset_bonus` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=4026 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

@@ -17,10 +17,11 @@ CREATE TABLE `item_details_shield` (
   `item_id` int(10) unsigned NOT NULL DEFAULT 0,
   `mitigation_low` smallint(5) unsigned NOT NULL DEFAULT 0,
   `mitigation_high` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `item_score` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `NewIndex` (`item_id`),
   CONSTRAINT `FK_item_details_shield` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5662 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11323 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

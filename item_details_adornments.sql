@@ -18,10 +18,14 @@ CREATE TABLE `item_details_adornments` (
   `duration` float unsigned NOT NULL DEFAULT 0,
   `item_types` bigint(20) unsigned NOT NULL DEFAULT 0,
   `slot_type` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `description` text COLLATE latin1_general_ci DEFAULT NULL,
+  `description2` text COLLATE latin1_general_ci DEFAULT NULL,
+  `unk1` int(10) unsigned NOT NULL DEFAULT 0,
+  `unk2` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `item_id` (`item_id`),
-  CONSTRAINT `item_details_adornments_ibfk_1` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+  CONSTRAINT `FK_ida_itemid` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=4987 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

@@ -15,21 +15,22 @@ DROP TABLE IF EXISTS `item_details_range`;
 CREATE TABLE `item_details_range` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `item_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `damage_low1` smallint(5) unsigned NOT NULL DEFAULT 0,
-  `damage_high1` smallint(5) unsigned NOT NULL DEFAULT 0,
-  `damage_low2` smallint(5) unsigned NOT NULL DEFAULT 0,
-  `damage_high2` smallint(5) unsigned NOT NULL DEFAULT 0,
-  `damage_low3` smallint(5) unsigned NOT NULL DEFAULT 0,
-  `damage_high3` smallint(5) unsigned NOT NULL DEFAULT 0,
-  `delay` smallint(5) unsigned NOT NULL DEFAULT 0,
-  `range_low` tinyint(3) unsigned NOT NULL DEFAULT 0,
-  `range_high` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `dmg_low` smallint(5) NOT NULL DEFAULT 0,
+  `dmg_high` smallint(5) NOT NULL DEFAULT 0,
+  `dmg_mastery_low` smallint(5) NOT NULL DEFAULT 0,
+  `dmg_mastery_high` smallint(5) NOT NULL DEFAULT 0,
+  `dmg_base_low` smallint(5) NOT NULL DEFAULT 0,
+  `dmg_base_high` smallint(5) NOT NULL DEFAULT 0,
+  `delay` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `range_low` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `range_high` smallint(5) unsigned NOT NULL DEFAULT 0,
   `damage_rating` float unsigned NOT NULL DEFAULT 0,
   `damage_type` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `item_score` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `NewIndex` (`item_id`),
   CONSTRAINT `FK_item_details_range` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3549 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7097 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

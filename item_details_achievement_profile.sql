@@ -9,21 +9,21 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-DROP TABLE IF EXISTS `instance_spawns_removed`;
+DROP TABLE IF EXISTS `item_details_achievement_profile`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `instance_spawns_removed` (
+CREATE TABLE `item_details_achievement_profile` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `instance_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `spawn_type` smallint(5) unsigned NOT NULL DEFAULT 0,
-  `spawn_location_entry_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `respawn_time` int(10) unsigned NOT NULL DEFAULT 0,
+  `item_id` int(10) unsigned NOT NULL,
+  `status_reduction` int(10) unsigned NOT NULL DEFAULT 0,
+  `coin_reduction` float NOT NULL DEFAULT 0,
+  `house_type` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `unk_string` text COLLATE latin1_general_ci DEFAULT NULL,
+  `unk1` tinyint(3) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
-  KEY `InstanceIDX` (`instance_id`),
-  KEY `SpawnIDX` (`spawn_location_entry_id`),
-  CONSTRAINT `FK_instance_spawns` FOREIGN KEY (`spawn_location_entry_id`) REFERENCES `spawn_location_entry` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `FK_instance_zones` FOREIGN KEY (`instance_id`) REFERENCES `instances` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1883 DEFAULT CHARSET=utf8;
+  KEY `FK_item_details_achievement_profile_items` (`item_id`),
+  CONSTRAINT `FK_item_details_achievement_profile_items` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

@@ -14,10 +14,13 @@ DROP TABLE IF EXISTS `item_itemsets`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `item_itemsets` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `set_name` varchar(250) COLLATE latin1_general_ci NOT NULL DEFAULT 'Unknown',
+  `set_name` varchar(255) COLLATE latin1_general_ci NOT NULL,
+  `bPvpDesc` tinyint(4) NOT NULL,
+  `itemLevel` smallint(6) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `SetNameIDX` (`set_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+  UNIQUE KEY `UK_ItemSet_IDX` (`bPvpDesc`,`set_name`,`itemLevel`) USING BTREE,
+  KEY `SetNameIDX` (`set_name`)
+) ENGINE=InnoDB AUTO_INCREMENT=1003 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

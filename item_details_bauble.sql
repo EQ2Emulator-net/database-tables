@@ -15,20 +15,21 @@ DROP TABLE IF EXISTS `item_details_bauble`;
 CREATE TABLE `item_details_bauble` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `item_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `cast` smallint(5) unsigned NOT NULL DEFAULT 100,
-  `recovery` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `cast` smallint(6) NOT NULL DEFAULT 100,
+  `recovery` smallint(6) NOT NULL DEFAULT 0,
   `duration` int(10) unsigned NOT NULL DEFAULT 0,
-  `recast` float unsigned NOT NULL DEFAULT 1,
-  `display_slot_optional` tinyint(3) unsigned NOT NULL DEFAULT 0,
-  `display_cast_time` tinyint(3) unsigned NOT NULL DEFAULT 0,
-  `display_bauble_type` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `recast` float NOT NULL DEFAULT 1,
+  `display_slot_optional` tinyint(1) unsigned NOT NULL DEFAULT 0,
+  `display_cast_time` tinyint(1) unsigned NOT NULL DEFAULT 0,
+  `display_bauble_type` tinyint(1) unsigned NOT NULL DEFAULT 0,
   `effect_radius` float NOT NULL DEFAULT 0,
-  `max_aoe_targets` int(10) unsigned NOT NULL DEFAULT 0,
+  `max_aoe_targets` int(11) NOT NULL DEFAULT 0,
   `display_until_cancelled` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `item_score` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `ItemBaubleIDX` (`item_id`),
   CONSTRAINT `FK_item_details_bauble` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4206 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8413 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

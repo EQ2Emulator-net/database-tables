@@ -16,14 +16,13 @@ CREATE TABLE `item_details_thrown` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `item_id` int(10) unsigned NOT NULL DEFAULT 0,
   `range_bonus` int(11) NOT NULL DEFAULT 0,
-  `damage_bonus` smallint(5) unsigned NOT NULL DEFAULT 0,
-  `unknown14` smallint(5) unsigned NOT NULL DEFAULT 0,
-  `hit_bonus` float unsigned NOT NULL DEFAULT 0,
+  `damage_bonus` int(11) NOT NULL DEFAULT 0,
+  `hit_bonus` float NOT NULL DEFAULT 0,
   `damage_type` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `NewIndex` (`item_id`),
   CONSTRAINT `FK_item_details_thrown` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=158 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=315 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

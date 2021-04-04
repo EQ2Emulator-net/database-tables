@@ -15,8 +15,8 @@ DROP TABLE IF EXISTS `item_details_house_container`;
 CREATE TABLE `item_details_house_container` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `item_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `num_slots` tinyint(3) unsigned NOT NULL DEFAULT 0,
-  `allowed_types` int(10) unsigned NOT NULL DEFAULT 0,
+  `num_slots` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `allowed_types` bigint(20) unsigned NOT NULL DEFAULT 0,
   `unknown12` int(10) unsigned NOT NULL DEFAULT 0,
   `unknown13` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `broker_commission` smallint(5) unsigned NOT NULL DEFAULT 0,

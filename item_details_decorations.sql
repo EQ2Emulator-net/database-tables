@@ -15,11 +15,11 @@ DROP TABLE IF EXISTS `item_details_decorations`;
 CREATE TABLE `item_details_decorations` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `item_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `decoration_name` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `decoration_name` text COLLATE latin1_general_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `DecorationIDX` (`item_id`),
   CONSTRAINT `FK_item_details_decorations` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

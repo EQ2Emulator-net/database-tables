@@ -14,11 +14,17 @@ DROP TABLE IF EXISTS `item_itemset_items`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `item_itemset_items` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `set_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `item_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `master_item_id` int(10) unsigned NOT NULL DEFAULT 0,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+  `set_id` int(10) unsigned NOT NULL,
+  `item_id` int(10) unsigned DEFAULT NULL,
+  `item_name` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `index` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_item_itemset_items_item_itemsets` (`set_id`),
+  KEY `ItemNameIDX` (`item_name`),
+  KEY `FK_item_itemset_items_items` (`item_id`),
+  CONSTRAINT `FK_item_itemset_items_item_itemsets` FOREIGN KEY (`set_id`) REFERENCES `item_itemsets` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_item_itemset_items_items` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6523 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

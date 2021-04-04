@@ -14,18 +14,18 @@ DROP TABLE IF EXISTS `item_itemset_bonus_stats`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `item_itemset_bonus_stats` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `set_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `master_item_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `items_needed` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `set_bonus_id` int(10) unsigned NOT NULL,
   `type` tinyint(3) unsigned NOT NULL DEFAULT 0,
-  `subtype` tinyint(3) unsigned NOT NULL DEFAULT 0,
-  `value` smallint(5) NOT NULL DEFAULT 0,
-  `value2` float DEFAULT 0,
-  `name` varchar(512) COLLATE latin1_general_ci DEFAULT '',
-  `unknown` tinyint(3) unsigned NOT NULL DEFAULT 0,
-  `stats_order` tinyint(3) unsigned NOT NULL DEFAULT 0,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+  `subtype` smallint(6) NOT NULL DEFAULT 0,
+  `iValue` int(11) DEFAULT NULL,
+  `fValue` float DEFAULT NULL,
+  `sValue` text COLLATE latin1_general_ci DEFAULT NULL,
+  `level` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `stats_order` tinyint(3) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UK_setbonusid_statsorder` (`set_bonus_id`,`stats_order`),
+  CONSTRAINT `FK_item_itemset_bonus_stats_item_itemset_bonus` FOREIGN KEY (`set_bonus_id`) REFERENCES `item_itemset_bonus` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2853 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

@@ -16,7 +16,7 @@ CREATE TABLE `item_details_food` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `item_id` int(10) unsigned NOT NULL DEFAULT 0,
   `type` tinyint(3) unsigned NOT NULL DEFAULT 0,
-  `level` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `level` smallint(6) NOT NULL DEFAULT 0,
   `duration` float NOT NULL DEFAULT 0,
   `satiation` tinyint(3) unsigned NOT NULL DEFAULT 2,
   PRIMARY KEY (`id`),

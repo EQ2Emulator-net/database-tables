@@ -15,12 +15,13 @@ DROP TABLE IF EXISTS `item_details_skill`;
 CREATE TABLE `item_details_skill` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `item_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `spell_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `spell_id` int(10) unsigned DEFAULT NULL,
   `spell_tier` tinyint(3) unsigned NOT NULL DEFAULT 1,
+  `soe_spell_crc` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_item_details_skill` (`item_id`),
   CONSTRAINT `FK_item_details_skill` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=24844 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=49691 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

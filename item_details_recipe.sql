@@ -16,8 +16,6 @@ CREATE TABLE `item_details_recipe` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `item_id` int(10) unsigned NOT NULL DEFAULT 0,
   `max_uses` smallint(5) unsigned NOT NULL DEFAULT 0,
-  `unknown13` smallint(5) unsigned NOT NULL DEFAULT 0,
-  `unknown14` smallint(5) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `ItemIDX` (`item_id`),
   CONSTRAINT `FK_item_details_recipe` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
