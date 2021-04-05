@@ -22,10 +22,21 @@ CREATE TABLE `item_appearances` (
   `highlight_red` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `highlight_green` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `highlight_blue` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `appearance_type` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `slot` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `house_placement_type` int(10) unsigned NOT NULL DEFAULT 0,
+  `vis_state` int(10) unsigned NOT NULL DEFAULT 4294967295,
+  `vis_state2` int(10) unsigned NOT NULL DEFAULT 4294967295,
+  `mount_type` int(10) unsigned NOT NULL DEFAULT 4294967295,
+  `heraldry` binary(7) NOT NULL DEFAULT '0\0\0\0\0\0\0',
+  `reforging_decoration` int(10) unsigned NOT NULL DEFAULT 0,
+  `bWeaponUnk` tinyint(1) unsigned NOT NULL DEFAULT 0,
+  `b2hWeapon` tinyint(1) unsigned NOT NULL DEFAULT 0,
+  `bUnknown` tinyint(1) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `NewIndex` (`item_id`),
-  CONSTRAINT `FK_item_appearances` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=76386 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+  KEY `FK_new_appearances_items` (`item_id`),
+  CONSTRAINT `FK_new_appearances_items` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=147457 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
