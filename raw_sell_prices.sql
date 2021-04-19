@@ -9,27 +9,14 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-DROP TABLE IF EXISTS `character_quests`;
+DROP TABLE IF EXISTS `raw_sell_prices`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `character_quests` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `char_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `quest_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `quest_giver` int(10) unsigned NOT NULL DEFAULT 0,
-  `given_date` datetime NOT NULL,
-  `completed_date` datetime DEFAULT NULL,
-  `current_quest` tinyint(3) unsigned NOT NULL DEFAULT 0,
-  `tracked` tinyint(3) unsigned NOT NULL DEFAULT 0,
-  `quest_flags` int(10) unsigned NOT NULL DEFAULT 0,
-  `hidden` tinyint(3) unsigned NOT NULL DEFAULT 0,
-  `complete_count` smallint(5) unsigned NOT NULL DEFAULT 0,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `CharQuestIDX` (`char_id`,`quest_id`),
-  KEY `FK_quest_quests` (`quest_id`),
-  CONSTRAINT `FK_character_quests` FOREIGN KEY (`char_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `FK_quest_quests` FOREIGN KEY (`quest_id`) REFERENCES `quests` (`quest_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=22893 DEFAULT CHARSET=utf8;
+CREATE TABLE `raw_sell_prices` (
+  `soe_item_id_unsigned` int(10) unsigned NOT NULL,
+  `price` int(10) unsigned NOT NULL,
+  UNIQUE KEY `SoeItemIDUK` (`soe_item_id_unsigned`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
