@@ -16,16 +16,16 @@ CREATE TABLE `item_stat_subtypes` (
   `stat_id` int(12) NOT NULL,
   `type_id` int(12) DEFAULT NULL,
   `subtype_id` int(12) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `label_mask` varchar(255) DEFAULT NULL,
-  `value_type` enum('integer','percent','string','decimal') DEFAULT NULL,
-  `description` text DEFAULT NULL,
-  `note` text DEFAULT NULL,
+  `name` varchar(255) COLLATE latin1_general_ci DEFAULT NULL,
+  `title` varchar(255) COLLATE latin1_general_ci DEFAULT NULL,
+  `label_mask` varchar(255) COLLATE latin1_general_ci DEFAULT NULL,
+  `value_type` enum('integer','percent','string','decimal') COLLATE latin1_general_ci DEFAULT NULL,
+  `description` text COLLATE latin1_general_ci DEFAULT NULL,
+  `note` text COLLATE latin1_general_ci DEFAULT NULL,
   PRIMARY KEY (`stat_id`),
   UNIQUE KEY `stat_id_unique` (`type_id`,`subtype_id`),
   CONSTRAINT `FK_item_stat_types` FOREIGN KEY (`type_id`) REFERENCES `item_stat_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

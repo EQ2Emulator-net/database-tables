@@ -14,10 +14,10 @@ DROP TABLE IF EXISTS `item_stat_types`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `item_stat_types` (
   `id` int(12) NOT NULL,
-  `name` varchar(100) DEFAULT NULL,
-  `desc` text DEFAULT NULL,
+  `name` varchar(100) COLLATE latin1_general_ci DEFAULT NULL,
+  `desc` text COLLATE latin1_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

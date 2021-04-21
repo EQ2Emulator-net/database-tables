@@ -16,13 +16,13 @@ CREATE TABLE `guild_ranks` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `guild_id` int(10) unsigned NOT NULL DEFAULT 0,
   `rank_id` tinyint(3) unsigned NOT NULL DEFAULT 0,
-  `rank_name` varchar(64) NOT NULL,
+  `rank_name` varchar(64) COLLATE latin1_general_ci NOT NULL,
   `permission1` int(10) unsigned NOT NULL DEFAULT 0,
   `permission2` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `GuildRankIDX` (`guild_id`,`rank_id`),
   CONSTRAINT `FK_guild_ranks` FOREIGN KEY (`guild_id`) REFERENCES `guilds` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

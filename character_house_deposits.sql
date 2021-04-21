@@ -16,12 +16,12 @@ CREATE TABLE `character_house_deposits` (
   `timestamp` int(10) unsigned NOT NULL DEFAULT 0,
   `house_id` int(10) unsigned NOT NULL DEFAULT 0,
   `instance_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `name` varchar(64) NOT NULL DEFAULT '',
+  `name` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   `amount` bigint(20) unsigned NOT NULL DEFAULT 0,
   `last_amount` bigint(20) unsigned NOT NULL DEFAULT 0,
   `status` int(10) unsigned NOT NULL DEFAULT 0,
   `last_status` int(10) unsigned NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

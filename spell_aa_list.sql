@@ -14,7 +14,7 @@ DROP TABLE IF EXISTS `spell_aa_list`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `spell_aa_list` (
   `list_id` int(10) unsigned NOT NULL,
-  `name` varchar(64) NOT NULL DEFAULT '',
+  `name` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   `level` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `maximumpoints` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `maxpoints` smallint(5) unsigned NOT NULL DEFAULT 0,
@@ -24,7 +24,7 @@ CREATE TABLE `spell_aa_list` (
   `ts` float NOT NULL,
   `version` tinyint(3) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`list_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

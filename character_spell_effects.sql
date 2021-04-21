@@ -13,7 +13,7 @@ DROP TABLE IF EXISTS `character_spell_effects`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `character_spell_effects` (
-  `name` varchar(64) NOT NULL DEFAULT '',
+  `name` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   `caster_char_id` int(10) unsigned NOT NULL DEFAULT 0,
   `target_char_id` int(10) unsigned NOT NULL DEFAULT 0,
   `target_type` tinyint(3) unsigned NOT NULL DEFAULT 0,
@@ -27,7 +27,7 @@ CREATE TABLE `character_spell_effects` (
   `tier` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `total_time` float unsigned NOT NULL DEFAULT 0,
   `expire_timestamp` int(10) unsigned NOT NULL DEFAULT 0,
-  `lua_file` text NOT NULL DEFAULT '',
+  `lua_file` text COLLATE latin1_general_ci NOT NULL DEFAULT '',
   `custom_spell` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `charid` int(10) unsigned NOT NULL DEFAULT 0,
   `damage_remaining` int(10) unsigned NOT NULL DEFAULT 0,
@@ -39,8 +39,8 @@ CREATE TABLE `character_spell_effects` (
   `last_spellattack_hit` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `interrupted` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `resisted` tinyint(3) unsigned NOT NULL DEFAULT 0,
-  `custom_function` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `custom_function` text COLLATE latin1_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

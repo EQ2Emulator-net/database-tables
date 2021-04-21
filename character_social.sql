@@ -15,12 +15,12 @@ DROP TABLE IF EXISTS `character_social`;
 CREATE TABLE `character_social` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `char_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `name` varchar(64) NOT NULL DEFAULT '',
-  `type` enum('FRIEND','IGNORE') NOT NULL DEFAULT 'FRIEND',
+  `name` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `type` enum('FRIEND','IGNORE') COLLATE latin1_general_ci NOT NULL DEFAULT 'FRIEND',
   PRIMARY KEY (`id`),
   UNIQUE KEY `CharNameIdx` (`char_id`,`name`,`type`),
   CONSTRAINT `FK_character_social` FOREIGN KEY (`char_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

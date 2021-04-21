@@ -17,12 +17,12 @@ CREATE TABLE `character_macros` (
   `char_id` int(10) unsigned NOT NULL DEFAULT 0,
   `macro_number` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `macro_icon` smallint(5) unsigned NOT NULL DEFAULT 0,
-  `macro_name` varchar(64) DEFAULT NULL,
-  `macro_text` text DEFAULT NULL,
+  `macro_name` varchar(64) COLLATE latin1_general_ci DEFAULT NULL,
+  `macro_text` text COLLATE latin1_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_character_macros` (`char_id`),
   CONSTRAINT `FK_character_macros` FOREIGN KEY (`char_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1325 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1325 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

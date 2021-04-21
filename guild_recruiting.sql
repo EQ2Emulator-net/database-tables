@@ -15,8 +15,8 @@ DROP TABLE IF EXISTS `guild_recruiting`;
 CREATE TABLE `guild_recruiting` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `guild_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `short_desc` varchar(250) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT '',
-  `full_desc` text CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `short_desc` varchar(250) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `full_desc` text COLLATE latin1_general_ci DEFAULT NULL,
   `min_level` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `play_style` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `looking_for` tinyint(3) unsigned NOT NULL DEFAULT 0,
@@ -27,7 +27,7 @@ CREATE TABLE `guild_recruiting` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `GuildIDX` (`guild_id`),
   CONSTRAINT `FK_guild_recruiting` FOREIGN KEY (`guild_id`) REFERENCES `guilds` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

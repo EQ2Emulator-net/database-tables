@@ -23,7 +23,7 @@ CREATE TABLE `spawn_location_entry` (
   KEY `SpawnIDX` (`spawn_id`),
   CONSTRAINT `FK_spawn_entry1` FOREIGN KEY (`spawn_location_id`) REFERENCES `spawn_location_name` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_spawn_entry2` FOREIGN KEY (`spawn_id`) REFERENCES `spawn` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1599381 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=1599381 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

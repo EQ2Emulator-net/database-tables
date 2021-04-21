@@ -14,13 +14,13 @@ DROP TABLE IF EXISTS `character_items`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `character_items` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `type` enum('EQUIPPED','NOT-EQUIPPED','APPEARANCE','DELETED') NOT NULL DEFAULT 'NOT-EQUIPPED',
+  `type` enum('EQUIPPED','NOT-EQUIPPED','APPEARANCE','DELETED') COLLATE latin1_general_ci NOT NULL DEFAULT 'NOT-EQUIPPED',
   `account_id` int(10) unsigned NOT NULL DEFAULT 0,
   `char_id` int(10) unsigned NOT NULL DEFAULT 0,
   `bag_id` int(11) NOT NULL DEFAULT 0,
   `slot` int(11) NOT NULL DEFAULT 0,
   `item_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `creator` varchar(64) NOT NULL DEFAULT '',
+  `creator` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   `condition_` tinyint(3) unsigned NOT NULL DEFAULT 100,
   `attuned` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `count` smallint(5) unsigned NOT NULL DEFAULT 1,
@@ -44,7 +44,7 @@ CREATE TABLE `character_items` (
   KEY `FK_items` (`item_id`),
   CONSTRAINT `FK_character_items` FOREIGN KEY (`char_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_items` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4784432 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4788434 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

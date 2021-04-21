@@ -45,7 +45,7 @@ CREATE TABLE `character_details` (
   `coin_silver` int(10) unsigned NOT NULL DEFAULT 0,
   `coin_gold` int(10) unsigned NOT NULL DEFAULT 0,
   `coin_plat` int(10) unsigned NOT NULL DEFAULT 0,
-  `pet_name` varchar(32) NOT NULL DEFAULT 'No Pet',
+  `pet_name` varchar(32) COLLATE latin1_general_ci NOT NULL DEFAULT 'No Pet',
   `status_points` int(10) unsigned NOT NULL DEFAULT 0,
   `max_power` int(10) unsigned NOT NULL DEFAULT 0,
   `max_hp` int(10) unsigned NOT NULL DEFAULT 0,
@@ -71,13 +71,13 @@ CREATE TABLE `character_details` (
   `house_zone_id` int(10) unsigned NOT NULL DEFAULT 0,
   `combat_voice` smallint(5) unsigned NOT NULL DEFAULT 52,
   `emote_voice` smallint(5) unsigned NOT NULL DEFAULT 1060,
-  `biography` varchar(512) NOT NULL DEFAULT '',
+  `biography` varchar(512) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   `flags` int(10) unsigned NOT NULL DEFAULT 301465665,
   `flags2` int(10) unsigned NOT NULL DEFAULT 131112,
   `prefix_title` int(10) NOT NULL DEFAULT -1,
   `suffix_title` int(10) NOT NULL DEFAULT -1,
   `current_language` smallint(5) NOT NULL DEFAULT 0,
-  `last_name` varchar(64) NOT NULL DEFAULT '',
+  `last_name` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   `assigned_aa` smallint(5) NOT NULL DEFAULT 0,
   `unassigned_aa` smallint(5) NOT NULL DEFAULT 0,
   `tradeskill_aa` smallint(5) NOT NULL DEFAULT 0,
@@ -89,7 +89,7 @@ CREATE TABLE `character_details` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `CharIDX` (`char_id`),
   CONSTRAINT `FK_character_details` FOREIGN KEY (`char_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1188 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1191 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

@@ -14,9 +14,9 @@ DROP TABLE IF EXISTS `character_properties`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `character_properties` (
   `charid` int(10) unsigned NOT NULL DEFAULT 0,
-  `propname` varchar(64) NOT NULL DEFAULT '',
-  `propvalue` varchar(64) NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `propname` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `propvalue` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

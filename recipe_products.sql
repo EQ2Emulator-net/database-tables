@@ -23,7 +23,7 @@ CREATE TABLE `recipe_products` (
   PRIMARY KEY (`id`),
   KEY `FK_RECIPE_ID` (`recipe_id`),
   CONSTRAINT `FK_RECIPE_ID` FOREIGN KEY (`recipe_id`) REFERENCES `recipes` (`recipe_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4911 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4911 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

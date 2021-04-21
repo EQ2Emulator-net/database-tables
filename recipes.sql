@@ -23,7 +23,7 @@ CREATE TABLE `recipes` (
   `knowledge` int(10) unsigned NOT NULL DEFAULT 0,
   `name` varchar(200) COLLATE latin1_general_ci DEFAULT 'Unknown',
   `book` varchar(200) COLLATE latin1_general_ci DEFAULT 'Unknown',
-  `device` enum('Chemistry Table','Engraved Desk','Forge','Stove & Keg','Sewing Table & Mannequin','Woodworking Table','Work Bench') CHARACTER SET utf8 NOT NULL,
+  `device` enum('Chemistry Table','Engraved Desk','Forge','Stove & Keg','Sewing Table & Mannequin','Woodworking Table','Work Bench') COLLATE latin1_general_ci NOT NULL,
   `product_classes` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `unknown2` int(10) unsigned NOT NULL DEFAULT 0,
   `unknown3` int(10) unsigned NOT NULL DEFAULT 0,

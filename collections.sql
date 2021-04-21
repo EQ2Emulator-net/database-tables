@@ -14,11 +14,11 @@ DROP TABLE IF EXISTS `collections`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `collections` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `collection_name` varchar(512) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT 'Unknown',
-  `collection_category` varchar(512) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT 'Unknown',
+  `collection_name` varchar(512) COLLATE latin1_general_ci NOT NULL DEFAULT 'Unknown',
+  `collection_category` varchar(512) COLLATE latin1_general_ci NOT NULL DEFAULT 'Unknown',
   `level` tinyint(3) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=554 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=554 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

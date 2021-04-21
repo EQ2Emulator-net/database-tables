@@ -18,7 +18,7 @@ CREATE TABLE `guild_events` (
   `event_id` bigint(20) unsigned NOT NULL DEFAULT 0,
   `event_date` int(10) unsigned NOT NULL DEFAULT 0,
   `event_type` smallint(5) unsigned NOT NULL DEFAULT 0,
-  `description` text CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+  `description` text COLLATE latin1_general_ci NOT NULL,
   `display` tinyint(1) unsigned NOT NULL DEFAULT 0,
   `locked` tinyint(1) unsigned NOT NULL DEFAULT 0,
   `archived` tinyint(1) unsigned NOT NULL DEFAULT 0,
@@ -26,7 +26,7 @@ CREATE TABLE `guild_events` (
   UNIQUE KEY `GuildIDX` (`guild_id`,`event_id`),
   KEY `EventDateIDX` (`event_date`),
   CONSTRAINT `FK_guild_events` FOREIGN KEY (`guild_id`) REFERENCES `guilds` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1973 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1973 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

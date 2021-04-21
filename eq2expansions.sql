@@ -16,7 +16,7 @@ CREATE TABLE `eq2expansions` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `expansion_tag` varchar(16) COLLATE latin1_general_ci DEFAULT NULL,
   `expansion` varchar(64) COLLATE latin1_general_ci DEFAULT NULL,
-  `expansion_type` enum('Expansion','Adventure Pack','Game Update') CHARACTER SET latin1 DEFAULT NULL,
+  `expansion_type` enum('Expansion','Adventure Pack','Game Update') COLLATE latin1_general_ci DEFAULT NULL,
   `release_date` varchar(20) COLLATE latin1_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;

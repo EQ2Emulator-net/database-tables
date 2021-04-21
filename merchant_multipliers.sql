@@ -23,7 +23,7 @@ CREATE TABLE `merchant_multipliers` (
   `min_faction` int(11) NOT NULL DEFAULT -20000,
   `max_faction` int(11) NOT NULL DEFAULT 50000,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

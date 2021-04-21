@@ -16,14 +16,14 @@ CREATE TABLE `char_colors` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `char_id` int(10) unsigned NOT NULL,
   `signed_value` tinyint(4) NOT NULL DEFAULT 0,
-  `type` varchar(32) NOT NULL,
+  `type` varchar(32) COLLATE latin1_general_ci NOT NULL,
   `red` smallint(6) NOT NULL DEFAULT 0,
   `green` smallint(6) NOT NULL DEFAULT 0,
   `blue` smallint(6) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `FK_char_colors` (`char_id`),
   CONSTRAINT `FK_char_colors` FOREIGN KEY (`char_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=55882 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=56029 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

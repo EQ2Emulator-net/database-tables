@@ -20,12 +20,12 @@ CREATE TABLE `character_skillbar` (
   `spell_id` int(10) unsigned NOT NULL DEFAULT 0,
   `tier` tinyint(3) unsigned NOT NULL DEFAULT 1,
   `slot` int(10) unsigned NOT NULL DEFAULT 0,
-  `text_val` varchar(255) NOT NULL DEFAULT 'Unused',
+  `text_val` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT 'Unused',
   PRIMARY KEY (`id`),
   UNIQUE KEY `NewIndex` (`hotbar`,`char_id`,`slot`),
   KEY `FK_character_skillbar` (`char_id`),
   CONSTRAINT `FK_character_skillbar` FOREIGN KEY (`char_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=15566 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15597 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

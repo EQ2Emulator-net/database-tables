@@ -13,11 +13,11 @@ DROP TABLE IF EXISTS `log_messages`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `log_messages` (
-  `type` text DEFAULT NULL,
-  `message` text DEFAULT NULL,
-  `name` text DEFAULT NULL,
-  `version` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `type` text COLLATE latin1_general_ci DEFAULT NULL,
+  `message` text COLLATE latin1_general_ci DEFAULT NULL,
+  `name` text COLLATE latin1_general_ci DEFAULT NULL,
+  `version` text COLLATE latin1_general_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

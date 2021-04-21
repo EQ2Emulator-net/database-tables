@@ -17,7 +17,7 @@ CREATE TABLE `spawn_instance_data` (
   `spawn_location_id` int(10) unsigned NOT NULL DEFAULT 0,
   `pickup_item_id` int(10) unsigned NOT NULL DEFAULT 0,
   `pickup_unique_item_id` int(10) unsigned NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

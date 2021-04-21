@@ -22,7 +22,7 @@ CREATE TABLE `starting_titles` (
   UNIQUE KEY `StartTitlesIDX` (`race_id`,`class_id`,`gender_id`,`title_id`),
   KEY `FK_starting_titles` (`title_id`),
   CONSTRAINT `FK_starting_titles` FOREIGN KEY (`title_id`) REFERENCES `titles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

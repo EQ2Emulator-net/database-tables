@@ -16,10 +16,10 @@ CREATE TABLE `appearances` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `appearance_id` int(10) unsigned NOT NULL,
   `name` varchar(250) COLLATE latin1_general_ci NOT NULL,
-  `min_client_version` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `min_client_version` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `AppIDX` (`appearance_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=27520 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=37005 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

@@ -16,7 +16,7 @@ CREATE TABLE `starting_items` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `class_id` tinyint(3) unsigned NOT NULL DEFAULT 255,
   `race_id` tinyint(3) unsigned NOT NULL DEFAULT 255,
-  `type` enum('EQUIPPED','NOT-EQUIPPED') CHARACTER SET latin1 NOT NULL DEFAULT 'NOT-EQUIPPED',
+  `type` enum('EQUIPPED','NOT-EQUIPPED') COLLATE latin1_general_ci NOT NULL DEFAULT 'NOT-EQUIPPED',
   `item_id` int(10) unsigned NOT NULL DEFAULT 0,
   `creator` varchar(64) COLLATE latin1_general_ci DEFAULT NULL,
   `condition_` tinyint(3) unsigned NOT NULL DEFAULT 100,

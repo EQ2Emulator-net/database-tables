@@ -15,23 +15,23 @@ DROP TABLE IF EXISTS `bugs`;
 CREATE TABLE `bugs` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `account_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `player` varchar(64) NOT NULL DEFAULT ' ',
-  `category` varchar(64) NOT NULL DEFAULT ' ',
-  `subcategory` varchar(64) NOT NULL DEFAULT ' ',
-  `causes_crash` varchar(64) NOT NULL DEFAULT ' ',
-  `reproducible` varchar(64) NOT NULL DEFAULT ' ',
-  `summary` varchar(128) NOT NULL DEFAULT ' ',
-  `description` text NOT NULL,
-  `version` varchar(32) NOT NULL DEFAULT ' ',
-  `spawn_name` varchar(64) NOT NULL DEFAULT 'N/A',
+  `player` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT ' ',
+  `category` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT ' ',
+  `subcategory` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT ' ',
+  `causes_crash` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT ' ',
+  `reproducible` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT ' ',
+  `summary` varchar(128) COLLATE latin1_general_ci NOT NULL DEFAULT ' ',
+  `description` text COLLATE latin1_general_ci NOT NULL,
+  `version` varchar(32) COLLATE latin1_general_ci NOT NULL DEFAULT ' ',
+  `spawn_name` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT 'N/A',
   `spawn_id` int(10) unsigned NOT NULL DEFAULT 0,
   `bug_datetime` timestamp NOT NULL DEFAULT current_timestamp(),
   `zone_id` int(10) unsigned NOT NULL DEFAULT 0,
   `copied` int(10) unsigned NOT NULL DEFAULT 0,
   `dbversion` int(10) NOT NULL DEFAULT 0,
-  `worldversion` varchar(64) NOT NULL DEFAULT '',
+  `worldversion` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

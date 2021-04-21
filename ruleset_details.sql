@@ -15,13 +15,13 @@ DROP TABLE IF EXISTS `ruleset_details`;
 CREATE TABLE `ruleset_details` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `ruleset_id` int(10) unsigned NOT NULL DEFAULT 1,
-  `rule_category` varchar(64) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT '',
-  `rule_type` varchar(64) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT '',
-  `rule_value` varchar(64) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT '',
-  `description` varchar(256) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `rule_category` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `rule_type` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `rule_value` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `description` varchar(256) COLLATE latin1_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `RuleCatTypeIDX` (`ruleset_id`,`rule_category`,`rule_type`)
-) ENGINE=InnoDB AUTO_INCREMENT=89 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=89 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

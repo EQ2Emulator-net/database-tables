@@ -27,12 +27,12 @@ CREATE TABLE `starting_zones` (
   `heading` float NOT NULL DEFAULT -999999,
   `deity` int(11) NOT NULL DEFAULT 255,
   `ruleflag` int(11) NOT NULL DEFAULT 0,
-  `description` text DEFAULT '',
+  `description` text COLLATE latin1_general_ci DEFAULT '',
   PRIMARY KEY (`id`),
   UNIQUE KEY `NewIndex` (`class_id`,`race_id`,`zone_id`,`choice`),
   KEY `FK_starting_zones` (`zone_id`),
   CONSTRAINT `FK_starting_zones` FOREIGN KEY (`zone_id`) REFERENCES `zones` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

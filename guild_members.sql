@@ -22,16 +22,16 @@ CREATE TABLE `guild_members` (
   `rank_id` tinyint(3) unsigned NOT NULL DEFAULT 7,
   `member_flags` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `join_date` int(10) unsigned NOT NULL DEFAULT 0,
-  `note` varchar(250) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
-  `officer_note` varchar(250) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
-  `recruiting_message` varchar(512) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `note` varchar(250) COLLATE latin1_general_ci DEFAULT NULL,
+  `officer_note` varchar(250) COLLATE latin1_general_ci DEFAULT NULL,
+  `recruiting_message` varchar(512) COLLATE latin1_general_ci DEFAULT NULL,
   `recruiter_picture_data` blob DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `GuildCharIDX` (`guild_id`,`char_id`),
   KEY `FK_guild_members2` (`char_id`),
   CONSTRAINT `FK_guild_members1` FOREIGN KEY (`guild_id`) REFERENCES `guilds` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_guild_members2` FOREIGN KEY (`char_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=14897 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14897 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

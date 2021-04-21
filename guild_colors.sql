@@ -15,14 +15,14 @@ DROP TABLE IF EXISTS `guild_colors`;
 CREATE TABLE `guild_colors` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `guild_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `color_type` enum('Emblem','Edge','Pattern') CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `color_type` enum('Emblem','Edge','Pattern') COLLATE latin1_general_ci DEFAULT NULL,
   `red` float NOT NULL DEFAULT 0,
   `green` float NOT NULL DEFAULT 0,
   `blue` float NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `GuildColorIDX` (`guild_id`,`color_type`),
   CONSTRAINT `FK_guild_colors` FOREIGN KEY (`guild_id`) REFERENCES `guilds` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

@@ -17,15 +17,15 @@ CREATE TABLE `guild_points_history` (
   `guild_id` int(10) unsigned NOT NULL DEFAULT 0,
   `char_id` int(10) unsigned NOT NULL DEFAULT 0,
   `points_date` int(10) unsigned NOT NULL DEFAULT 0,
-  `modified_by` varchar(64) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT '',
-  `comment` text CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `modified_by` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `comment` text COLLATE latin1_general_ci DEFAULT NULL,
   `points` float NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `GuildCharIDX` (`guild_id`,`char_id`),
   KEY `FK_char_points_history` (`char_id`),
   CONSTRAINT `FK_char_points_history` FOREIGN KEY (`char_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_guild_points_history` FOREIGN KEY (`guild_id`) REFERENCES `guilds` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

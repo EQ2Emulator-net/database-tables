@@ -15,9 +15,9 @@ DROP TABLE IF EXISTS `character_mail`;
 CREATE TABLE `character_mail` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `player_to_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `player_from` varchar(64) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT '',
-  `subject` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT '',
-  `mail_body` text CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `player_from` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `subject` varchar(255) COLLATE latin1_general_ci NOT NULL DEFAULT '',
+  `mail_body` text COLLATE latin1_general_ci DEFAULT NULL,
   `already_read` tinyint(1) unsigned NOT NULL DEFAULT 0,
   `mail_type` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `coin_copper` int(10) unsigned NOT NULL DEFAULT 0,
@@ -33,7 +33,7 @@ CREATE TABLE `character_mail` (
   PRIMARY KEY (`id`),
   KEY `FK_character_mail` (`player_to_id`),
   CONSTRAINT `FK_character_mail` FOREIGN KEY (`player_to_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
