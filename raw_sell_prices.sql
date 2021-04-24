@@ -15,6 +15,7 @@ DROP TABLE IF EXISTS `raw_sell_prices`;
 CREATE TABLE `raw_sell_prices` (
   `soe_item_id_unsigned` int(10) unsigned NOT NULL,
   `price` int(10) unsigned NOT NULL,
+  `status` int(10) unsigned NOT NULL,
   UNIQUE KEY `SoeItemIDUK` (`soe_item_id_unsigned`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
