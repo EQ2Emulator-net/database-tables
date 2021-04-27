@@ -25,7 +25,7 @@ CREATE TABLE `character_instances` (
   PRIMARY KEY (`id`),
   KEY `CharacterIDX` (`char_id`),
   KEY `InstanceIDX` (`instance_zone_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=111 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=112 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
