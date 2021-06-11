@@ -26,7 +26,7 @@ CREATE TABLE `character_history` (
   UNIQUE KEY `char_id` (`char_id`,`type`,`subtype`,`value`),
   KEY `CharHistoryIDX` (`char_id`,`type`,`subtype`),
   CONSTRAINT `FK_character_history` FOREIGN KEY (`char_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1573201 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1573233 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
