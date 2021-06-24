@@ -19,6 +19,7 @@ CREATE TABLE `lootdrop` (
   `item_charges` smallint(5) unsigned NOT NULL DEFAULT 1,
   `equip_item` tinyint(3) unsigned NOT NULL DEFAULT 0,
   `probability` float unsigned NOT NULL DEFAULT 25,
+  `no_drop_quest_completed` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `NewIndex` (`loot_table_id`),
   KEY `FK_lootdrop` (`item_id`),
