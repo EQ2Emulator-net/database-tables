@@ -20,10 +20,8 @@ CREATE TABLE `instance_spawns_removed` (
   `respawn_time` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `InstanceIDX` (`instance_id`),
-  KEY `SpawnIDX` (`spawn_location_entry_id`),
-  CONSTRAINT `FK_instance_spawns` FOREIGN KEY (`spawn_location_entry_id`) REFERENCES `spawn_location_entry` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `FK_instance_zones` FOREIGN KEY (`instance_id`) REFERENCES `instances` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2141 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+  KEY `SpawnIDX` (`spawn_location_entry_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2149 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
