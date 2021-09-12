@@ -21,7 +21,7 @@ CREATE TABLE `loottable` (
   `lootdrop_probability` float unsigned NOT NULL DEFAULT 100,
   `coin_probability` float unsigned NOT NULL DEFAULT 100,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1920 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1937 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
