@@ -21,7 +21,7 @@ CREATE TABLE `statistics` (
   `stat_date` int(11) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `characterIDX` (`char_id`,`guild_id`,`stat_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12472712 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12477023 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
