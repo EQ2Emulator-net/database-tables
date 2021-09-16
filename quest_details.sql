@@ -23,7 +23,7 @@ CREATE TABLE `quest_details` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `QuestIDX` (`quest_id`,`type`,`subtype`,`value`,`faction_id`,`quantity`),
   CONSTRAINT `FK_quest_details` FOREIGN KEY (`quest_id`) REFERENCES `quests` (`quest_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2645 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2668 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
