@@ -21,7 +21,7 @@ CREATE TABLE `guild_event_filters` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `FilterEventIDX` (`guild_id`,`event_id`),
   CONSTRAINT `FK_guild_event_filters` FOREIGN KEY (`guild_id`) REFERENCES `guilds` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=280 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=373 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
