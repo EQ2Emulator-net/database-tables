@@ -104,13 +104,13 @@ CREATE TABLE `items` (
   `header_unk19` int(10) unsigned NOT NULL DEFAULT 0,
   `header_ftr_type_unk` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `Pvp_Id_UIDX` (`bPvpDesc`,`soe_item_id`) USING BTREE,
   KEY `ItemTypeIDX` (`item_type`),
   KEY `ItemNameIDX` (`name`),
   KEY `FK_items_item_itemsets` (`set_id`),
   KEY `OffersQuestIDX` (`offers_quest_name`) USING BTREE,
   KEY `RequiredByQuestIDX` (`required_by_quest_name`),
   KEY `Index 8` (`soe_item_id_unsigned`),
+  KEY `Pvp_Id_UIDX` (`bPvpDesc`,`soe_item_id`) USING BTREE,
   CONSTRAINT `FK_items_item_itemsets` FOREIGN KEY (`set_id`) REFERENCES `item_itemsets` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
