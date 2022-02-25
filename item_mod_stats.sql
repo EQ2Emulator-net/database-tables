@@ -25,7 +25,7 @@ CREATE TABLE `item_mod_stats` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `UK_setbonusid_statsorder` (`item_id`,`stats_order`) USING BTREE,
   CONSTRAINT `FK_item_mod_stats_items` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=860825 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=860828 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
