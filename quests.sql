@@ -24,7 +24,7 @@ CREATE TABLE `quests` (
   `completed_text` text COLLATE latin1_general_ci DEFAULT NULL,
   `lua_script` varchar(255) COLLATE latin1_general_ci DEFAULT NULL,
   PRIMARY KEY (`quest_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5520 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5525 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
