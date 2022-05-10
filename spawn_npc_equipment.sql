@@ -21,7 +21,7 @@ CREATE TABLE `spawn_npc_equipment` (
   UNIQUE KEY `ListItemIDX` (`equipment_list_id`,`item_id`),
   KEY `FK_spawn_npc_equipment` (`item_id`),
   CONSTRAINT `FK_spawn_npc_equipment` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

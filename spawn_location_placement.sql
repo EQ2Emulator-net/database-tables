@@ -34,12 +34,24 @@ CREATE TABLE `spawn_location_placement` (
   `lvl_override` int(11) NOT NULL DEFAULT 0,
   `hp_override` int(11) NOT NULL DEFAULT 0,
   `mp_override` int(11) NOT NULL DEFAULT 0,
+  `str_override` int(11) unsigned NOT NULL DEFAULT 0,
+  `sta_override` int(11) unsigned NOT NULL DEFAULT 0,
+  `wis_override` int(11) unsigned NOT NULL DEFAULT 0,
+  `int_override` int(11) unsigned NOT NULL DEFAULT 0,
+  `agi_override` int(11) unsigned NOT NULL DEFAULT 0,
+  `heat_override` int(10) unsigned NOT NULL DEFAULT 0,
+  `cold_override` int(10) unsigned NOT NULL DEFAULT 0,
+  `magic_override` int(10) unsigned NOT NULL DEFAULT 0,
+  `mental_override` int(10) unsigned NOT NULL DEFAULT 0,
+  `divine_override` int(10) unsigned NOT NULL DEFAULT 0,
+  `disease_override` int(10) unsigned NOT NULL DEFAULT 0,
+  `poison_override` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `SpawnLocationIDX` (`spawn_location_id`),
   KEY `ZoneIDX` (`zone_id`),
   CONSTRAINT `FK_placement1` FOREIGN KEY (`spawn_location_id`) REFERENCES `spawn_location_name` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_placement2` FOREIGN KEY (`zone_id`) REFERENCES `zones` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1593945 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=1593946 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
