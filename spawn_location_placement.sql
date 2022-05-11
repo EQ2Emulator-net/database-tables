@@ -46,6 +46,7 @@ CREATE TABLE `spawn_location_placement` (
   `divine_override` int(10) unsigned NOT NULL DEFAULT 0,
   `disease_override` int(10) unsigned NOT NULL DEFAULT 0,
   `poison_override` int(10) unsigned NOT NULL DEFAULT 0,
+  `difficulty_override` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `SpawnLocationIDX` (`spawn_location_id`),
   KEY `ZoneIDX` (`zone_id`),
