@@ -58,7 +58,7 @@ CREATE TABLE `characters` (
   KEY `CharZoneIDX` (`current_zone_id`),
   KEY `CharAcctIDX` (`account_id`),
   CONSTRAINT `FK_characters` FOREIGN KEY (`current_zone_id`) REFERENCES `zones` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1308 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1309 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
