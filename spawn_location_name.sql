@@ -16,7 +16,7 @@ CREATE TABLE `spawn_location_name` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(200) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=133773176 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=133773177 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
