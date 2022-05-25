@@ -25,7 +25,7 @@ CREATE TABLE `spawn_location_placement` (
   `heading` float NOT NULL DEFAULT 0,
   `pitch` float NOT NULL DEFAULT 0,
   `roll` float NOT NULL DEFAULT 0,
-  `respawn` int(10) unsigned NOT NULL DEFAULT 3600,
+  `respawn` int(10) unsigned NOT NULL DEFAULT 300,
   `expire_timer` int(10) unsigned NOT NULL DEFAULT 0,
   `expire_offset` int(10) unsigned NOT NULL DEFAULT 0,
   `grid_id` int(10) unsigned NOT NULL DEFAULT 0,
@@ -52,7 +52,7 @@ CREATE TABLE `spawn_location_placement` (
   KEY `ZoneIDX` (`zone_id`),
   CONSTRAINT `FK_placement1` FOREIGN KEY (`spawn_location_id`) REFERENCES `spawn_location_name` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_placement2` FOREIGN KEY (`zone_id`) REFERENCES `zones` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1594047 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=1594107 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
