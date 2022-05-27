@@ -22,7 +22,7 @@ CREATE TABLE `groundspawn_items` (
   `percent` float unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `FK_item_groundspawns` (`item_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3236 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=3237 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
