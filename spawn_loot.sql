@@ -21,7 +21,7 @@ CREATE TABLE `spawn_loot` (
   KEY `FK_loot_spawn` (`spawn_id`),
   CONSTRAINT `FK_loot_spawn` FOREIGN KEY (`spawn_id`) REFERENCES `spawn` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_spawnloot_loottable` FOREIGN KEY (`loottable_id`) REFERENCES `loottable` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=686 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=687 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
