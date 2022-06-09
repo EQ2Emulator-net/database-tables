@@ -25,7 +25,7 @@ CREATE TABLE `character_skillbar` (
   UNIQUE KEY `NewIndex` (`hotbar`,`char_id`,`slot`),
   KEY `FK_character_skillbar` (`char_id`),
   CONSTRAINT `FK_character_skillbar` FOREIGN KEY (`char_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=18173 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18180 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
