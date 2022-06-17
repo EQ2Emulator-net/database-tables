@@ -46,6 +46,7 @@ CREATE TABLE `zones` (
   `login_checksum` int(10) unsigned NOT NULL DEFAULT 0,
   `sky_file` varchar(64) COLLATE latin1_general_ci NOT NULL DEFAULT '',
   `can_bind` int(11) DEFAULT 0,
+  `can_gate` int(11) DEFAULT 1,
   PRIMARY KEY (`id`),
   UNIQUE KEY `ZoneNameIDX` (`name`),
   KEY `ZoneDescIDX` (`description`),
