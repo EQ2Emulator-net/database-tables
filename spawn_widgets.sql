@@ -41,7 +41,7 @@ CREATE TABLE `spawn_widgets` (
   UNIQUE KEY `SpawnIDX` (`spawn_id`),
   KEY `WidgetIDX` (`widget_id`),
   CONSTRAINT `FK_widgets_spawn` FOREIGN KEY (`spawn_id`) REFERENCES `spawn` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5561 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5564 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

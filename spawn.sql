@@ -50,6 +50,7 @@ CREATE TABLE `spawn` (
   `holiday_flag` int(10) unsigned NOT NULL DEFAULT 0,
   `aaxp_rewards` int(10) unsigned NOT NULL DEFAULT 0,
   `loot_tier` int(10) unsigned NOT NULL DEFAULT 0,
+  `loot_drop_type` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `SpawnIDX` (`name`),
   KEY `SpawnCmdIDX` (`command_primary`,`command_secondary`),
