@@ -53,6 +53,7 @@ CREATE TABLE `characters` (
   `admin_status` int(10) NOT NULL DEFAULT 0,
   `is_online` tinyint(1) unsigned NOT NULL DEFAULT 0,
   `group_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `alignment` tinyint(3) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `CharIDX` (`name`),
   KEY `CharZoneIDX` (`current_zone_id`),

@@ -28,6 +28,7 @@ CREATE TABLE `starting_zones` (
   `deity` int(11) NOT NULL DEFAULT 255,
   `ruleflag` int(11) NOT NULL DEFAULT 0,
   `description` text COLLATE latin1_general_ci DEFAULT '',
+  `start_alignment` tinyint(3) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `NewIndex` (`class_id`,`race_id`,`zone_id`,`choice`),
   KEY `FK_starting_zones` (`zone_id`),
