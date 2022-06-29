@@ -23,7 +23,7 @@ CREATE TABLE `spawn_npc_spells` (
   KEY `FK_npc_spells_spell_list_id` (`spell_list_id`),
   CONSTRAINT `FK_npc_spells_spell_list_id` FOREIGN KEY (`spell_list_id`) REFERENCES `spawn_npc_spell_lists` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_spawn_npc_spells` FOREIGN KEY (`spell_id`) REFERENCES `spells` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=462 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=548 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
