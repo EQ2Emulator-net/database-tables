@@ -103,6 +103,7 @@ CREATE TABLE `items` (
   `header_bytes10` binary(10) NOT NULL DEFAULT '0\0\0\0\0\0\0\0\0\0',
   `header_unk19` int(10) unsigned NOT NULL DEFAULT 0,
   `header_ftr_type_unk` int(10) unsigned NOT NULL DEFAULT 0,
+  `effect_type` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `ItemTypeIDX` (`item_type`),
   KEY `ItemNameIDX` (`name`),
