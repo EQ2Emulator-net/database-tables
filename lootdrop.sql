@@ -25,7 +25,7 @@ CREATE TABLE `lootdrop` (
   KEY `FK_lootdrop` (`item_id`),
   CONSTRAINT `FK_lootdrop` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_loottable` FOREIGN KEY (`loot_table_id`) REFERENCES `loottable` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=36856 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=36860 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

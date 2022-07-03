@@ -39,12 +39,14 @@ CREATE TABLE `character_items` (
   `adorn9` int(10) unsigned NOT NULL DEFAULT 0,
   `adorn10` int(10) unsigned NOT NULL DEFAULT 0,
   `no_sale` tinyint(1) unsigned NOT NULL DEFAULT 0,
+  `last_saved` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`),
   UNIQUE KEY `NewIndex` (`char_id`,`type`,`bag_id`,`slot`),
   KEY `FK_items` (`item_id`),
   CONSTRAINT `FK_character_items` FOREIGN KEY (`char_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_items` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=13599268 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13626118 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
