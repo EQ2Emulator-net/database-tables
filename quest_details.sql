@@ -16,14 +16,14 @@ CREATE TABLE `quest_details` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `quest_id` int(10) unsigned NOT NULL DEFAULT 0,
   `type` enum('None','Prereq','Reward') COLLATE latin1_general_ci NOT NULL DEFAULT 'None',
-  `subtype` enum('None','Experience','Faction','Item','Quest','Race','AdvClass','AdvLevel','TSClass','TSLevel','Coin','Selectable','MaxCoin','MaxAdvLevel','MaxTSLevel','TSExperience') COLLATE latin1_general_ci NOT NULL DEFAULT 'None',
+  `subtype` enum('None','Experience','Faction','Item','Quest','Race','AdvLevel','TSLevel','Coin','Selectable','MaxCoin','MaxAdvLevel','MaxTSLevel','TSExperience','Class') COLLATE latin1_general_ci NOT NULL DEFAULT 'None',
   `value` int(10) NOT NULL DEFAULT 0,
   `faction_id` smallint(5) unsigned NOT NULL DEFAULT 0,
   `quantity` tinyint(3) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `QuestIDX` (`quest_id`,`type`,`subtype`,`value`,`faction_id`,`quantity`),
   CONSTRAINT `FK_quest_details` FOREIGN KEY (`quest_id`) REFERENCES `quests` (`quest_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3758 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3771 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
