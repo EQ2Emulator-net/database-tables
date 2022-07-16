@@ -31,6 +31,7 @@ CREATE TABLE `spawn_signs` (
   `zone_heading` float NOT NULL DEFAULT 0,
   `include_heading` tinyint(3) unsigned NOT NULL DEFAULT 1,
   `include_location` tinyint(3) unsigned NOT NULL DEFAULT 1,
+  `language` tinyint(3) unsigned DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `SpawnIDX` (`spawn_id`),
   CONSTRAINT `FK_signs_spawn` FOREIGN KEY (`spawn_id`) REFERENCES `spawn` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
