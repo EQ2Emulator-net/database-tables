@@ -21,7 +21,7 @@ CREATE TABLE `race_types` (
   `race_id` smallint(5) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `NewIndex1` (`model_type`)
-) ENGINE=InnoDB AUTO_INCREMENT=382 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=449 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
