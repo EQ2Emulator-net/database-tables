@@ -19,7 +19,7 @@ CREATE TABLE `spawn_npc_spell_lists` (
   PRIMARY KEY (`id`),
   KEY `DescIndex` (`description`(100)),
   KEY `IDXCategory` (`category`(100))
-) ENGINE=InnoDB AUTO_INCREMENT=242 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=250 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
