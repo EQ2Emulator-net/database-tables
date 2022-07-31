@@ -9,21 +9,19 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-DROP TABLE IF EXISTS `character_spells`;
+DROP TABLE IF EXISTS `recipe_comp_list_item`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `character_spells` (
+CREATE TABLE `recipe_comp_list_item` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `char_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `spell_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `tier` tinyint(3) unsigned NOT NULL DEFAULT 1,
-  `knowledge_slot` mediumint(9) NOT NULL DEFAULT -1,
+  `comp_list` int(10) unsigned NOT NULL,
+  `item_id` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `NewIndex` (`char_id`,`spell_id`,`tier`),
-  KEY `FK_char_spells` (`spell_id`),
-  CONSTRAINT `FK_char_spells` FOREIGN KEY (`spell_id`) REFERENCES `spells` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `FK_character_spells` FOREIGN KEY (`char_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1941186 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+  UNIQUE KEY `Index 2` (`comp_list`,`item_id`) USING BTREE,
+  KEY `FK_recipe_comp_list_item_items` (`item_id`),
+  CONSTRAINT `FK_recipe_comp_list_item_items` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`),
+  CONSTRAINT `FK_recipe_comp_list_item_recipe_comp_list` FOREIGN KEY (`comp_list`) REFERENCES `recipe_comp_list` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
