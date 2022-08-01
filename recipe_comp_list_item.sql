@@ -21,7 +21,7 @@ CREATE TABLE `recipe_comp_list_item` (
   KEY `FK_recipe_comp_list_item_items` (`item_id`),
   CONSTRAINT `FK_recipe_comp_list_item_items` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`),
   CONSTRAINT `FK_recipe_comp_list_item_recipe_comp_list` FOREIGN KEY (`comp_list`) REFERENCES `recipe_comp_list` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=131 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
