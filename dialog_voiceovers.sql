@@ -9,19 +9,18 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-DROP TABLE IF EXISTS `statistics`;
+DROP TABLE IF EXISTS `dialog_voiceovers`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `statistics` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `char_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `guild_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `stat_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `stat_value` double NOT NULL DEFAULT 0,
-  `stat_date` int(11) unsigned NOT NULL DEFAULT 0,
+CREATE TABLE `dialog_voiceovers` (
+  `id` int(10) unsigned NOT NULL,
+  `file` text COLLATE latin1_general_ci NOT NULL,
+  `key1` int(10) unsigned NOT NULL DEFAULT 0,
+  `key2` int(10) unsigned NOT NULL DEFAULT 0,
+  `bChecked` int(10) unsigned NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `characterIDX` (`char_id`,`guild_id`,`stat_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13782405 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+  KEY `IndexFile` (`file`(100))
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

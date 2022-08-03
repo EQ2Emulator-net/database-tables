@@ -9,19 +9,23 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-DROP TABLE IF EXISTS `statistics`;
+DROP TABLE IF EXISTS `dialog_responses`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `statistics` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `char_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `guild_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `stat_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `stat_value` double NOT NULL DEFAULT 0,
-  `stat_date` int(11) unsigned NOT NULL DEFAULT 0,
+CREATE TABLE `dialog_responses` (
+  `id` int(10) unsigned NOT NULL,
+  `parent_dialog_id` int(10) unsigned NOT NULL,
+  `index` int(10) unsigned NOT NULL,
+  `text_id` int(10) unsigned NOT NULL,
+  `next_dialog_id` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `characterIDX` (`char_id`,`guild_id`,`stat_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13782405 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+  KEY `FK__dialogs` (`parent_dialog_id`),
+  KEY `FK_dialog_responses_dialog_text` (`text_id`),
+  KEY `FK__dialogs_2` (`next_dialog_id`) USING BTREE,
+  CONSTRAINT `FK__dialogs` FOREIGN KEY (`parent_dialog_id`) REFERENCES `dialogs` (`id`) ON UPDATE CASCADE,
+  CONSTRAINT `FK__dialogs_2` FOREIGN KEY (`next_dialog_id`) REFERENCES `dialogs` (`id`) ON UPDATE CASCADE,
+  CONSTRAINT `FK_dialog_responses_dialog_text` FOREIGN KEY (`text_id`) REFERENCES `dialog_text` (`id`) ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
