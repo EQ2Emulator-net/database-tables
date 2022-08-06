@@ -105,6 +105,7 @@ CREATE TABLE `items` (
   `header_ftr_type_unk` int(10) unsigned NOT NULL DEFAULT 0,
   `effect_type` int(10) unsigned NOT NULL DEFAULT 0,
   `tinkered` tinyint(1) NOT NULL DEFAULT 0,
+  `book_language` tinyint(3) unsigned DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `ItemTypeIDX` (`item_type`),
   KEY `ItemNameIDX` (`name`),

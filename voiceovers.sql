@@ -9,22 +9,21 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-DROP TABLE IF EXISTS `quests`;
+DROP TABLE IF EXISTS `voiceovers`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `quests` (
-  `quest_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(64) COLLATE latin1_general_ci DEFAULT NULL,
-  `type` varchar(64) COLLATE latin1_general_ci DEFAULT NULL,
-  `zone` varchar(64) COLLATE latin1_general_ci DEFAULT NULL,
-  `level` tinyint(3) unsigned NOT NULL DEFAULT 0,
-  `enc_level` tinyint(3) NOT NULL DEFAULT 0,
-  `description` text COLLATE latin1_general_ci DEFAULT NULL,
-  `spawn_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `completed_text` text COLLATE latin1_general_ci DEFAULT NULL,
-  `lua_script` varchar(255) COLLATE latin1_general_ci DEFAULT NULL,
-  PRIMARY KEY (`quest_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5713 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+CREATE TABLE `voiceovers` (
+  `type_id` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `id` int(10) unsigned NOT NULL DEFAULT 0,
+  `indexed` smallint(5) unsigned NOT NULL DEFAULT 0,
+  `mp3_string` text NOT NULL DEFAULT '',
+  `text_string` text NOT NULL DEFAULT '',
+  `emote_string` text NOT NULL DEFAULT '',
+  `key1` int(10) unsigned NOT NULL DEFAULT 0,
+  `key2` int(10) unsigned NOT NULL DEFAULT 0,
+  `garbled` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `garble_link_id` tinyint(3) unsigned NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
