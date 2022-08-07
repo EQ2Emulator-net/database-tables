@@ -9,24 +9,20 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-DROP TABLE IF EXISTS `character_history`;
+DROP TABLE IF EXISTS `character_quest_rewards`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `character_history` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+CREATE TABLE `character_quest_rewards` (
   `char_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `type` enum('None','Death','Discovery','XP') COLLATE latin1_general_ci NOT NULL DEFAULT 'None',
-  `subtype` enum('None','Adventure','Tradeskill','Quest','AA','Item','Location') COLLATE latin1_general_ci NOT NULL DEFAULT 'None',
-  `value` int(10) unsigned NOT NULL DEFAULT 0,
-  `value2` int(10) unsigned NOT NULL DEFAULT 0,
-  `location` varchar(200) COLLATE latin1_general_ci DEFAULT '',
-  `event_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `event_date` int(10) unsigned NOT NULL DEFAULT 0,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `char_id` (`char_id`,`type`,`subtype`,`value`),
-  KEY `CharHistoryIDX` (`char_id`,`type`,`subtype`),
-  CONSTRAINT `FK_character_history` FOREIGN KEY (`char_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3175228 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+  `quest_id` int(10) unsigned NOT NULL DEFAULT 0,
+  `indexed` int(10) unsigned NOT NULL DEFAULT 0,
+  `is_temporary` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `is_collection` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `has_displayed` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `tmp_coin` bigint(20) unsigned NOT NULL DEFAULT 0,
+  `tmp_status` int(10) unsigned NOT NULL DEFAULT 0,
+  `description` text NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
