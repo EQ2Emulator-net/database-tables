@@ -9,17 +9,15 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-DROP TABLE IF EXISTS `character_titles`;
+DROP TABLE IF EXISTS `broker_item_map`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `character_titles` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `char_id` int(10) unsigned NOT NULL DEFAULT 0,
-  `title_id` int(10) unsigned NOT NULL DEFAULT 0,
-  PRIMARY KEY (`id`),
-  KEY `FK_character_titles` (`char_id`),
-  CONSTRAINT `FK_character_titles` FOREIGN KEY (`char_id`) REFERENCES `characters` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3645 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+CREATE TABLE `broker_item_map` (
+  `version_range1` int(10) unsigned NOT NULL DEFAULT 0,
+  `version_range2` int(10) unsigned NOT NULL DEFAULT 0,
+  `client_bitmask` bigint(20) unsigned NOT NULL DEFAULT 0,
+  `server_bitmask` bigint(20) unsigned NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
