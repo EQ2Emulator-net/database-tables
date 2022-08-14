@@ -2,8 +2,6 @@
 
 ## Empty tables required for EQ2Emulator
 
-!\[my badge\](https://img.shields.io/badge/language-MySQL-blue)
-
 All the tables needed for the emulator to work.
 No data included and can be used with [EQ2Emulator Database Data](https://github.com/EQ2Emulator-net/database-data)
 
